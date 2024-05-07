@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --azul-primario: #2694BF;
+    --azul-claro: #32BAD9;
+    --azul-ceu: #2182BF;
+    --azul-escuro: #287696;
+    --azul-titulo: #2A5276;
+    --azul-marinho: #001D6C;
+    --cinza-basico: #DDE1E6;
+    --cinza-subtitulo: #ffffff;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--cinza-subtitulo);
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+/* Definições do header */
+.header {
+    background-color: black;
+    border-bottom: 1px solid var(--cinza-subtitulo);
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+}
+
+.opium-logo{
+width: 20%;
+}
+
+.navbar {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    color: white;
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar li::after {
+    content: '';
+    position: absolute;
+    bottom: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background-color: red;
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar li:hover::after {
+    width: 100%;
+    /* Aumentando a largura no hover */
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    /* transition: color 0.3s;  */
+    transition: transform 0.3s;
+}
+
+a:hover {
+    color: red;
+    transform: scale(1.1);
+
+}
+
+.header .container {
+    justify-content: space-between;
+}
+
+button.button-login {
+    background-color: transparent;
+    border: 2px solid var(--cinza-subtitulo);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+button.button-login:hover {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cinza-basico);
+}
+
+
+.button-login, .button-cadastro {
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    color: #fff;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 10px 22px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.button-login:hover, .button-cadastro:hover {
+    background-color: var(--cinza-basico);
+    color: black;
+    transform: scale(1.1);
+}
+
+.home {
+    background-image: url(img/Frame\ 1.png);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content {
+    text-align: center;
+    color: white;
+}
+
+.home-content h1 {
+    font-size: 150px;
+    margin-bottom: 20px;
+    padding-top: 150px;
+}
+
+.seta-icon {
+    width: 190px;
+    position: relative; 
+    left: 800px;
+    top: 70px;
+
+    cursor: pointer;
+
+    animation-name: move;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.conceito-opium{
+    background-color: black;
+    width: 100%;
+}
+
+.div-texto{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: black;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+.container-conceito{
+    display: flex;
+    justify-content: center;
+    gap: 500px;
+}
+
+.gif-opium{
+    width: 500px;
+}
+
+
+.texto-conceito{
+    max-width: 400px;
+    text-align: center;
+}
+
+.opium-na-moda{
+    background-color: black;
+    color: white;
+}
+
+.titulo-op-moda{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: black;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+.texto-op-moda{
+    display: flex;
+    width: 547px;
+    height: 302px;
+    margin-left: 1200px;
+}
+
+.container-carrousel {
+    position: relative;
+    padding: 15px;
+    max-width: 1240px;
+    margin: 100px auto;
+}
+
+
+.gallery {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 70px;
+}
+
+
+.arrow-left,
+.arrow-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: auto;
+    bottom: 0;
+    width: 40px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+
+.arrow-left {
+    left: -70px;
+    padding-top: 15px;
+    /* Ajuste a margem esquerda conforme necessário */
+}
+
+.arrow-right{
+    left: auto;
+    right: -70px;
+    padding-top: 7px;
+
+}
+
+.container-carrousel button img{
+    width: 40px;
+}
+
+.gallery-wrapper{
+    overflow-x: auto;
+}
+
+.item {
+    flex-shrink: 0;
+    opacity: 0.6;
+    transition: all 600ms ease-in-out;
+}
+
+.current-item{
+    opacity: 1;
+}
+
+.gallery-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  @keyframes move {
+    0%{
+        top: 0px;
+    }
+
+    100%{
+
+    }
+  }
