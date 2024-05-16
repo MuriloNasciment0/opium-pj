@@ -44,6 +44,7 @@ body {
 
 .opium-logo{
 width: 20%;
+display: flex;
 }
 
 .navbar {
