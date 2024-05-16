@@ -280,6 +280,94 @@ button.button-login:hover {
     display: none;
 }
 
+.texto-members{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: black;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+.container-cards{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    width: 448px;
+    height: 778px;
+
+    box-shadow: 0 0 0 1px var(--cinza-subtitulo), 0 0 0 1px var(--cinza-subtitulo) inset;
+}
+
+
+.artist-img{
+    width: 448px;
+    height: 778px;
+}
+
+.containerr-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    height: 80vh;
+}
+
+
+.containerr-cards > * {
+    margin-bottom: 20px;
+}
+
+.containerr-cards > *:nth-child(1n) {
+    margin-right: -440px;
+}
+
+.containerr-cards > *:nth-child(2n) {
+    margin-left: -930px;
+}
+
+.card1{
+    position: relative;
+    width: 424px;
+    height: 424px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 1px var(--cinza-subtitulo), 0 0 0 1px var(--cinza-subtitulo) inset;
+    transition:  transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+.card1:hover{
+    transform: scale(1.1);
+}
+
+.artistt-img{
+    width: 424px;
+    height: 424px;
+    border-radius: 10px;
+}
+
+.texto {
+    font-size: 12px;
+
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+
+}
+
+
+
+
+
 ::-webkit-scrollbar {
     width: 10px;
   }
