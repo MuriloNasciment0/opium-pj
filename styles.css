@@ -292,7 +292,7 @@ button.button-login:hover {
 .container-cards{
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 28px;
 }
 
 .card {
@@ -300,15 +300,29 @@ button.button-login:hover {
     height: 778px;
 
     box-shadow: 0 0 0 1px var(--cinza-subtitulo), 0 0 0 1px var(--cinza-subtitulo) inset;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
 }
 
+.card:hover{
+    transform: scale(1.1);
+    filter: grayscale(0);
+}
 
 .artist-img{
     width: 448px;
     height: 778px;
+
+    transition: 0.3s ease-in-out;
+
+    filter: grayscale(100%);
 }
 
-.containerr-cards {
+.artist-img:hover{
+    filter: grayscale(0);
+}
+
+/* .containerr-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -341,6 +355,11 @@ button.button-login:hover {
 }
 .card1:hover{
     transform: scale(1.1);
+} */
+
+/* 
+.card2:hover{
+    transform: scale(1.1);
 }
 
 .artistt-img{
@@ -362,7 +381,7 @@ button.button-login:hover {
     text-align: center;
     border-radius: 0 0 10px 10px;
 
-}
+} */
 
 
 
