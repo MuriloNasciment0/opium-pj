@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/login.css" />
+
+  <title>Opium Website</title>
+</head>
+
+<body>
+  <div class="container_login" id="container_login">
+    <div class="headerLogin">
+      <a href="">
+        <img id="logo" src="assets/img/opium-symbol-white.png" />
+      </a>
+
+      <ul class="navbar">
+        <a href="index.html">
+          <li>Home</li>
+        </a>
+        <a href="index.html">
+          <li>Conceito</li>
+        </a>
+
+        <a href="index.html">
+          <li>OPIUM🞹 Label</li>
+        </a>
+        <a href="index.html">
+          <li>?</li>
+        </a>
+      </ul>
+    </div>
+
+    <div class="login">
+      <h1>Entrar na OPIUM🞹</h1>
+      <br />
+
+      <div class="inputs">
+        <input placeholder="Email" id="login_input_email" />
+        <br />
+        <span id="loginEmailErro" class="mensagemErro"></span>
+        <br />
+        <br />
+
+        <input placeholder="Senha" id="login_input_senha" />
+        <br />
+        <span id="loginSenhaErro" class="mensagemErro"></span>
+        <br />
+        <br />
+
+        <button class="login-button" onclick="entrar()">Login</button>
+        <br />
+
+        <div id="div_login"></div>
+
+        <div class="nao_tem_conta">
+          <h5>Novo por aqui?</h5>
+
+          <button id="nao_tem_conta_button" onclick="habilitarCadastro()">
+            Cadastrar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <img src="assets/img/SLATT 1.png" id="imagem_cama" />
+
+  <!-- <div class="divBranca" id="divBranca">
+
+        <img src="img/logo_azul_windas_sem_fundo.png" alt="">
+
+    </div> -->
+
+  <div class="container_cadastro" id="container_cadastro">
+    <div class="headerCadastro">
+      <ul class="navbar">
+        <a href="index.html">
+          <li>Home</li>
+        </a>
+        <a href="index.html">
+          <li>Conceito</li>
+        </a>
+
+        <a href="index.html">
+          <li>OPIUM🞹 Label</li>
+        </a>
+        <a href="index.html">
+          <li>?</li>
+        </a>
+      </ul>
+
+      <a href="">
+        <img id="logo" src="assets/img/opium-symbol-white.png" />
+      </a>
+    </div>
+
+    <div class="cadastroSucesso" id="cadastroSucesso">
+      <p>Cadastro realizado com sucesso!</p>
+      <span>Faça login para continuar</span>
+    </div>
+
+    <div class="login">
+      <h1>Criar conta</h1>
+
+      <div class="inputs">
+        <input placeholder="Nome" id="input_nome" />
+        <br />
+        <span id="nomeErro" class="mensagemErro"></span>
+        <br />
+        <br />
+        <br />
+
+        <input placeholder="Email" id="cadastro_input_email" />
+        <br />
+        <span id="cadastroEmailErro" class="mensagemErro"></span>
+        <br />
+        <br />
+        <br />
+
+        <input placeholder="Senha" id="cadastro_input_senha" />
+        <br />
+        <span id="cadastroSenhaErro" class="mensagemErro"></span>
+        <br />
+        <br />
+        <br />
+
+        <input placeholder="Confirmação de senha" id="confirmacaoSenha" />
+        <br />
+        <span id="cadastroConfirmSenhaErro" class="mensagemErro"></span>
+        <br />
+        <br />
+        <br />
+
+        <button id="cadastro-button" onclick="cadastrar()">Cadastre-se</button>
+        <br />
+
+        <h5 id="h5_cadastro"></h5>
+
+        <div class="tem_conta">
+          <h5 id="temConta">Tem uma conta?</h5>
+
+          <button id="tem_conta_button" onclick="habilitarLogin()">
+            Entre
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<script src="js/login.js"></script>
+
+
+<script>
+  function cadastrar() {
+    // criando variáveis para receber os valores das inputs
+    const nome = document.getElementById("input_nome").value;
+    const email = document.getElementById("cadastro_input_email").value;
+    const senha = document.getElementById("cadastro_input_senha").value;
+    const confirmSenha = document.getElementById("confirmacaoSenha").value;
+
+    // criando váriaveis de verificação com REGEX
+    let regexMaiuscula = /[A-Z]/;
+    let regexMinuscula = /[a-z]/;
+
+    // criando variáveis auxiliares para validação dos campos
+    let senhaValidaRegex = false;
+    let senhaValidaNumeros = false;
+    let senhaValida = false;
+    let confirmSenhaValida = false;
+    let nomeValido = false;
+    let emailValido = false;
+
+    // criando variáveis de mensagens
+    let mensagemErroNome = "O nome deve conter pelo três um caracteres.";
+
+    let mensagemEmailInvalido = "Insira um email válido. Ex: windas@gmail.com";
+
+    let mensagemSenhaCurta = "A senha deve conter pelo menos 6 caracteres";
+
+    let mensagemSenhaInvalida = `A senha deve conter pelo menos uma letra maiúscula, 
+      além de uma minúscula, um caracter numérico e pelo menos um caracter especial <br> (@, #, %, *, ?, $, &, !, -, /).`;
+
+    let mensagemErroConfirmSenha = "As senhas devem ser iguais.";
+
+    /* ------------------- VERIFICAÇÃO DE NOME ------------------ */
+
+    if (nome.length > 2) {
+      nomeValido = true;
+    }
+
+    if (!nomeValido) {
+      document.getElementById("nomeErro").innerHTML = mensagemErroNome;
+    } else if (nomeValido) {
+      document.getElementById("nomeErro").innerHTML = "";
+    }
+
+    /* ------------------ VERIFICAÇÃO DE SENHA ----------------------- */
+
+    // testando se os valores da variavel 'senha' contém os valores aceitos pelos REGEX
+    if (
+      regexMaiuscula.test(senha) &&
+      regexMinuscula.test(senha) &&
+      senha.length >= 6
+    ) {
+      senhaValidaRegex = true;
+    }
+
+    // verificando se existem números na senha
+
+    for (let contador = 0; contador <= 9; contador++) {
+      if (senha.indexOf(`${contador}`) > -1) {
+        senhaValidaNumeros = true;
+      }
+    }
+
+    // caso a senha passe no teste de REGEX e números...
+    if (senhaValidaRegex && senhaValidaNumeros) {
+      senhaValida = true;
+    }
+
+    // verificando o tamanho da senha
+
+    if (senha.length < 6) {
+      document.getElementById("cadastroSenhaErro").innerHTML = mensagemSenhaCurta;
+    } else {
+      document.getElementById("cadastroSenhaErro").innerHTML = "";
+    }
+
+    // verificando se a senha passa em todos os testes
+
+    if (!senhaValida && senha.length >= 6) {
+      document.getElementById("cadastroSenhaErro").innerHTML =
+        mensagemSenhaInvalida;
+    } else if (senhaValida && senha.length >= 6) {
+      document.getElementById("cadastroSenhaErro").innerHTML = "";
+    }
+
+    /* ------------------ VERIFICAÇÃO DECONFIRMAÇÃO DE SENHA ----------------------- */
+
+    if (confirmSenha != senha) {
+      document.getElementById("cadastroConfirmSenhaErro").innerHTML =
+        mensagemErroConfirmSenha;
+    } else {
+      confirmSenhaValida = true;
+      document.getElementById("cadastroConfirmSenhaErro").innerHTML = "";
+    }
+
+    /* ------------------------------ CONFIRMAÇÃO DE EMAIL ------------------------------- */
+
+    if (
+      email.indexOf("@") > 0 &&
+      (email.indexOf(".com") > email.indexOf("@") ||
+        email.indexOf(".school") > email.indexOf("@"))
+    ) {
+      emailValido = true;
+    }
+
+    if (!emailValido) {
+      document.getElementById("cadastroEmailErro").innerHTML =
+        mensagemEmailInvalido;
+    } else if (emailValido) {
+      document.getElementById("cadastroEmailErro").innerHTML = "";
+    }
+
+    /* ------------------------------ VERIFICANDO SE TODOS OS CAMPOS ESTÃO CORRETOS ----------------------------- */
+
+    var nomeVar = input_nome.value;
+    var emailVar = cadastro_input_email.value;
+    var senhaVar = cadastro_input_senha.value;
+    var confirmacaoSenhaVar = confirmacaoSenha.value;
+
+    if (nomeValido && emailValido && senhaValida && confirmSenhaValida) {
+      document.getElementById("cadastroSucesso").style.display = "flex";
+      document.getElementById("cadastroSucesso").style.animation =
+        "cadastroComSucesso";
+      document.getElementById("cadastroSucesso").style.animationDuration = "5s";
+
+      setTimeout(
+        () => (document.getElementById("cadastroSucesso").style.display = "none"),
+        4900
+      );
+
+      fetch("/usuarios/cadastrar", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          // crie um atributo que recebe o valor recuperado aqui
+          // Agora vá para o arquivo routes/usuario.js
+          nomeServer: nomeVar,
+          emailServer: emailVar,
+          senhaServer: senhaVar
+        }),
+      })
+        .then(function (resposta) {
+          console.log("resposta: ", resposta);
+
+          if (resposta.ok) {
+            cadastroSucesso.style.display = "flex";
+
+            setTimeout(() => {
+              window.location = "login.html";
+            }, "2000");
+          } else {
+            throw "Houve um erro ao tentar realizar o cadastro!";
+          }
+        })
+        .catch(function (resposta) {
+          console.log(`#ERRO: ${resposta}`);
+        });
+
+      return false;
+
+    }
+  }
+
+  function entrar() {
+
+    var emailVar = login_input_email.value;
+    var senhaVar = login_input_senha.value;
+
+    if (emailVar == "" || senhaVar == "") {
+      alert("preencha todos os campos");
+      return false;
+    }
+   
+    console.log("FORM LOGIN: ", emailVar);
+    console.log("FORM SENHA: ", senhaVar);
+
+    fetch("/usuarios/autenticar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        emailServer: emailVar,
+        senhaServer: senhaVar
+      })
+    }).then(function (resposta) {
+      console.log("ESTOU NO THEN DO entrar()!")
+
+      if (resposta.ok) {
+        console.log(resposta);
+
+        resposta.json().then(json => {
+          console.log(json);
+          console.log(JSON.stringify(json));
+          sessionStorage.EMAIL_USUARIO = json.email;
+          sessionStorage.NOME_USUARIO = json.nome;
+          sessionStorage.ID_USUARIO = json.id;
+
+          setTimeout(function () {
+            window.location = "./dashboard/cards.html";
+          }, 1000); // apenas para exibir o loading
+
+        });
+
+      } else {
+
+        console.log("Houve um erro ao tentar realizar o login!");
+
+        resposta.text().then(texto => {
+          console.error(texto);
+          finalizarAguardar(texto);
+        });
+      }
+
+    }).catch(function (erro) {
+      console.log(erro);
+    })
+
+    return false;
+  }
+</script>
