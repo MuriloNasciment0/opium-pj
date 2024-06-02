@@ -198,26 +198,26 @@ function certezafinalizarRanking() {
 }
 
 function finalizarRanking() {
-    document.getElementById("baseTelaTabelaRanking").style.display = "flex"
+    // document.getElementById("baseTelaTabelaRanking").style.display = "flex"
     document.getElementById("fundoModal").style.display = "none"
     document.getElementById("rankingAlbum19").style.display = "none"
 }
 
 function exibirRanking() {
-    document.getElementById("baseTelaTabelaRanking").style.display = "flex"
+    // document.getElementById("baseTelaTabelaRanking").style.display = "flex"
     document.getElementById("rankingAlbum1").style.display = "none"
     document.getElementById("conteudoPrincipal").style.display = "none"
 }
 
 function voltarPaginaInicial() {
-    document.getElementById("baseTelaTabelaRanking").style.display = "none"
+    // document.getElementById("baseTelaTabelaRanking").style.display = "none"
     document.getElementById("conteudoPrincipal").style.display = "flex"
 }
 
 
 function voltarParaRanking() {
     document.getElementById("rankingAlbum19").style.display = "flex"
-    document.getElementById("baseTelaTabelaRanking").style.display = "none"
+    // document.getElementById("baseTelaTabelaRanking").style.display = "none"
     document.getElementById("fundoModal").style.display = "none"
 }
 

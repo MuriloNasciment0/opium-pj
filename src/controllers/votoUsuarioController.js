@@ -77,58 +77,58 @@ function exibirQtdUserRanking(req, res) {
             );
 }
 
-function deletarDadosRanking(req, res) {
-    var fkUsuario = req.params.fkUsuario;
+// function deletarDadosRanking(req, res) {
+//     var fkUsuario = req.params.fkUsuario;
 
-    votoUsuarioModel.deletarDadosRanking(fkUsuario)
-        .then(
-            function (resultado) {
-                res.json(resultado);
-            }
-        )
-        .catch(
-            function (erro) {
-                console.log(erro);
-                console.log("Houve um erro nos dados do ranking: ", erro.sqlMessage);
-                res.status(500).json(erro.sqlMessage);
-            }
-        );
-}
+//     votoUsuarioModel.deletarDadosRanking(fkUsuario)
+//         .then(
+//             function (resultado) {
+//                 res.json(resultado);
+//             }
+//         )
+//         .catch(
+//             function (erro) {
+//                 console.log(erro);
+//                 console.log("Houve um erro nos dados do ranking: ", erro.sqlMessage);
+//                 res.status(500).json(erro.sqlMessage);
+//             }
+//         );
+// }
 
-function verificarUsuarioRanking(req, res) {
-    var fkUsuario = req.params.fkUsuario;
-    console.log("Valor de fkUsuario recebido: ", fkUsuario);
+// function verificarUsuarioRanking(req, res) {
+//     var fkUsuario = req.params.fkUsuario;
+//     console.log("Valor de fkUsuario recebido: ", fkUsuario);
 
-    votoUsuarioModel.verificarUsuarioRanking(fkUsuario)
-        .then(
-            function (resultado) {
-                res.json(resultado);
-            }
-        )
-        .catch(
-            function (erro) {
-                console.log(erro);
-                console.log("Houve um erro nos dados do ranking: ", erro.sqlMessage);
-                res.status(500).json(erro.sqlMessage);
-            }
-        );
-}
+//     votoUsuarioModel.verificarUsuarioRanking(fkUsuario)
+//         .then(
+//             function (resultado) {
+//                 res.json(resultado);
+//             }
+//         )
+//         .catch(
+//             function (erro) {
+//                 console.log(erro);
+//                 console.log("Houve um erro nos dados do ranking: ", erro.sqlMessage);
+//                 res.status(500).json(erro.sqlMessage);
+//             }
+//         );
+// }
 
-function albumPorGenero(req, res) {
-    votoUsuarioModel.albumPorGenero()
-        .then(
-            function (resultado) {
-                res.json(resultado);
-            }
-        )
-        .catch(
-            function (erro) {
-                console.log(erro);
-                console.log("Houve um erro nos dados do album: ", erro.sqlMessage);
-                res.status(500).json(erro.sqlMessage);
-            }
-        );
-}
+// function albumPorGenero(req, res) {
+//     votoUsuarioModel.albumPorGenero()
+//         .then(
+//             function (resultado) {
+//                 res.json(resultado);
+//             }
+//         )
+//         .catch(
+//             function (erro) {
+//                 console.log(erro);
+//                 console.log("Houve um erro nos dados do album: ", erro.sqlMessage);
+//                 res.status(500).json(erro.sqlMessage);
+//             }
+//         );
+// }
 
 function top10Albuns(req, res) {
     votoUsuarioModel.top10Albuns()
@@ -151,8 +151,8 @@ module.exports = {
     listar,
     testar,
     exibirQtdUserRanking,
-    deletarDadosRanking,
-    verificarUsuarioRanking,
-    albumPorGenero,
+    // deletarDadosRanking,
+    // verificarUsuarioRanking,
+    // albumPorGenero,
     top10Albuns
 }

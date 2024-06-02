@@ -19,17 +19,17 @@ router.get("/exibirQtdUserRanking", function (req, res) {
     votoUsuarioController.exibirQtdUserRanking(req, res);
 })
 
-router.delete("/deletarDadosRanking/:fkUsuario", function (req, res) {
-    votoUsuarioController.deletarDadosRanking(req, res);
-})
+// router.delete("/deletarDadosRanking/:fkUsuario", function (req, res) {
+//     votoUsuarioController.deletarDadosRanking(req, res);
+// })
 
-router.get("/verificarUsuarioRanking/:fkUsuario", function (req, res) {
-    votoUsuarioController.verificarUsuarioRanking(req, res);
-})
+// router.get("/verificarUsuarioRanking/:fkUsuario", function (req, res) {
+//     votoUsuarioController.verificarUsuarioRanking(req, res);
+// })
 
-router.get("/albumPorGenero", function (req, res) {
-    votoUsuarioController.albumPorGenero(req, res);
-})
+// router.get("/albumPorGenero", function (req, res) {
+//     votoUsuarioController.albumPorGenero(req, res);
+// })
 
 router.get("/top10Albuns", function (req, res) {
     votoUsuarioController.top10Albuns(req, res);

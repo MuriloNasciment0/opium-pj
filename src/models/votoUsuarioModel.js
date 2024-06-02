@@ -28,34 +28,34 @@ function exibirQtdUserRanking() {
     return database.executar(instrucao);
 }
 
-function deletarDadosRanking(fkUsuario) {
-    var instrucao = `
-    DELETE FROM votoUsuario
-    WHERE fkUsuario = ${fkUsuario};
-    `;
-    console.log("Executando a instrução SQL: \n" + instrucao);
-    return database.executar(instrucao);
-}
+// function deletarDadosRanking(fkUsuario) {
+//     var instrucao = `
+//     DELETE FROM votoUsuario
+//     WHERE fkUsuario = ${fkUsuario};
+//     `;
+//     console.log("Executando a instrução SQL: \n" + instrucao);
+//     return database.executar(instrucao);
+// }
 
-function verificarUsuarioRanking(fkUsuario) {
-    var instrucao = `
-    SELECT COUNT(idVotoUsuario) AS quantidadeLinha  FROM votoUsuario
-    WHERE fkUsuario = ${fkUsuario};
-    `;
-    console.log("Executando a instrução SQL: \n" + instrucao);
-    return database.executar(instrucao);
-}
+// function verificarUsuarioRanking(fkUsuario) {
+//     var instrucao = `
+//     SELECT COUNT(idVotoUsuario) AS quantidadeLinha  FROM votoUsuario
+//     WHERE fkUsuario = ${fkUsuario};
+//     `;
+//     console.log("Executando a instrução SQL: \n" + instrucao);
+//     return database.executar(instrucao);
+// }
 
-function albumPorGenero() {
-    var instrucao = `
-    SELECT album.genero, COUNT(avaliacao) as quantidadeAvaliacao FROM votoUsuario JOIN album
-    ON fkAlbum = idAlbum
-    WHERE avaliacao LIKE 'MUSIC!'
-    GROUP BY album.genero ORDER BY quantidadeAvaliacao;
-    `;
-    console.log("Executando a instrução SQL: \n" + instrucao);
-    return database.executar(instrucao);
-}
+// function albumPorGenero() {
+//     var instrucao = `
+//     SELECT album.genero, COUNT(avaliacao) as quantidadeAvaliacao FROM votoUsuario JOIN album
+//     ON fkAlbum = idAlbum
+//     WHERE avaliacao LIKE 'MUSIC!'
+//     GROUP BY album.genero ORDER BY quantidadeAvaliacao;
+//     `;
+//     console.log("Executando a instrução SQL: \n" + instrucao);
+//     return database.executar(instrucao);
+// }
 
 function top10Albuns() {
     var instrucao = `
@@ -72,8 +72,8 @@ module.exports = {
     inserirVotoUsuario,
     listar,
     exibirQtdUserRanking,
-    deletarDadosRanking,
-    verificarUsuarioRanking,
-    albumPorGenero,
+    // deletarDadosRanking,
+    // verificarUsuarioRanking,
+    // albumPorGenero,
     top10Albuns
 };

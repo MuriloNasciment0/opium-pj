@@ -11,7 +11,9 @@
     <title>Ranking</title>
 </head>
 
-<body onload="verificarUsuarioRanking(sessionStorage.ID_USUARIO)">
+<!-- <body onload="verificarUsuarioRanking(sessionStorage.ID_USUARIO)"></body> -->
+
+<body>
     <div class="menuLateral">
         <img id="imgLogoSistema" src="../assets/img/opium-symbol-white.png">
 
@@ -2796,7 +2798,7 @@
 
             </div>
         </div>
-
+<!-- 
         <div id="baseTelaTabelaRanking">
             <h1>Sua Tabela do Ranking</h1>
             <p>
@@ -2824,7 +2826,7 @@
                 <button class="botaotabelaRanking voltar"
                     onclick="deletarDadosRanking(sessionStorage.ID_USUARIO)">Refazer</button>
             </div>
-        </div>
+        </div> -->
 
     </div>
 
@@ -2888,49 +2890,49 @@
         })
     }
 
-    function deletarDadosRanking(fkUsuario) {
-        fetch(`/votoUsuario/deletarDadosRanking/${fkUsuario}`, {
-            method: "DELETE",
-            headers: {
-                "Content-Type": "application/json"
-            }
+    // function deletarDadosRanking(fkUsuario) {
+    //     fetch(`/votoUsuario/deletarDadosRanking/${fkUsuario}`, {
+    //         method: "DELETE",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         }
 
-        }).then(function (resposta) {
+    //     }).then(function (resposta) {
 
-            if (resposta.ok) {
-                console.log("Dados do ranking deletados com sucesso");
-                verificarUsuarioRanking(sessionStorage.ID_USUARIO)
-            } else if (resposta.status == 404) {
-                window.alert("Deu 404!");
-            }
-        }).catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-        });
-    }
+    //         if (resposta.ok) {
+    //             console.log("Dados do ranking deletados com sucesso");
+    //             verificarUsuarioRanking(sessionStorage.ID_USUARIO)
+    //         } else if (resposta.status == 404) {
+    //             window.alert("Deu 404!");
+    //         }
+    //     }).catch(function (resposta) {
+    //         console.log(`#ERRO: ${resposta}`);
+    //     });
+    // }
 
-    function verificarUsuarioRanking(fkUsuario) {
-        fetch(`/votoUsuario/verificarUsuarioRanking/${fkUsuario}`, {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json"
-            }
-        }).then(function (resposta) {
+    // function verificarUsuarioRanking(fkUsuario) {
+    //     fetch(`/votoUsuario/verificarUsuarioRanking/${fkUsuario}`, {
+    //         method: "GET",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         }
+    //     }).then(function (resposta) {
 
-            if (resposta.ok) {
-                resposta.json().then((json) => {
-                    if (json[0].quantidadeLinha > 0) {
-                        exibirRanking()
-                        obterRanking()
-                    } else {
-                        voltarPaginaInicial()
-                    }
-                })
-            } else if (resposta.status == 404) {
-                window.alert("Deu 404!");
-            }
-        }).catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-        });
-    }
+    //         if (resposta.ok) {
+    //             resposta.json().then((json) => {
+    //                 if (json[0].quantidadeLinha > 0) {
+    //                     exibirRanking()
+    //                     obterRanking()
+    //                 } else {
+    //                     voltarPaginaInicial()
+    //                 }
+    //             })
+    //         } else if (resposta.status == 404) {
+    //             window.alert("Deu 404!");
+    //         }
+    //     }).catch(function (resposta) {
+    //         console.log(`#ERRO: ${resposta}`);
+    //     });
+    // }
 
 </script>
