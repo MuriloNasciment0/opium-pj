@@ -1,2 +1,2 @@
-# projeto-cuphead
-Site sobre o jogo Cuphead, onde você pode encontrar informações sobre o jogo, além de poder montar o seu próprio ranking de dificuldade dos principais chefes.
+# Projeto sobre a OPIUM
+Site sobre a opium e seus integrantes, aqui você encontrará informações sobre seus integrantes, albums, etc.
