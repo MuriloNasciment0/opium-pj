@@ -1,0 +1,2936 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/ranking.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.ico">
+    <title>Ranking</title>
+</head>
+
+<body onload="verificarUsuarioRanking(sessionStorage.ID_USUARIO)">
+    <div class="menuLateral">
+        <img id="imgLogoSistema" src="../assets/img/opium-symbol-white.png">
+
+        <div class="botoesMenu">
+            <a href="dashboard.html">
+                <div class="botao">
+                    <img class="iconMenuLateral" src="../assets/img/dashIcon.png">
+                    <h4>Dashboard</h4>
+                </div>
+            </a>
+
+            <a href="ranking.html">
+                <div class="botao  selecionado">
+                    <img class="iconMenuLateral" src="../assets/img/iconRanking.svg">
+                    <h4>Ranking</h4>
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="conteudo">
+
+        <div class="menuTopo">
+            <img id="imgLogoTopo" src="../assets/img/logoOpium.png">
+            <details class="perfil">
+                <summary><img id="imgPessoaTopo" src="../assets/img/VampireIcon.png">
+                    <h4>Olá, <span id="nomeUsuario"></span></h4><img id="imgSetaTopo" src="../assets/img/white.png">
+                </summary>
+                <div class="menuPerfil">
+                    <a href="../index.html">
+                        <div class="opcaoMenuPerfil">
+                            <img id="imgIconConfig" src="../assets/img/iconLogout.svg">
+                            <span class="corLogout">Sair</span>
+                        </div>
+                    </a>
+                </div>
+            </details>
+        </div>
+
+        <div id="conteudoPrincipal">
+            <h1>Ranking dos álbuns da opium</h1>
+            <p>
+                Monte seu ranking dos principais albuns da opium, classificando eles entre as dificuldade:
+                ruim, bom, muito bom e MUSIC.
+            </p>
+            <img id="imgInicioRanking" src="../assets/img/inicioRankOpium.png">
+
+            <div class="botaoInicioRanking" onclick="iniciarRanking()">
+                <h3>Iniciar Ranking</h3>
+            </div>
+        </div>
+
+        <div id="rankingAlbum1" class="rankingAlbum">
+            <h1 class="tituloRankingAlbuns">Ranking dos Albuns</h1>
+            <div class="baseRanking">
+                <div class="listaLateralAlbuns">
+                    <h3>Albuns</h3>
+                    <div class="areaOpcoesAlbum">
+
+                        <div class="opcaoAlbum albumSelecionado">
+                            <img class="imgOpcaoAlbum" src="../assets/img/inAbundance.png">
+                            <span>In abundance</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/selfTilted.png">
+                            <span>Self Tilted</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/dielit.png">
+                            <span>Die lit</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/wlr.png">
+                            <span>Who lotta red</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/pjX.png">
+                            <span>Project X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/x.png">
+                            <span>X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/xtented.png">
+                            <span>XTENDED</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/agc.png">
+                            <span>A Great Chaos</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/neezus.png">
+                            <span>NezzusDestroyed</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/darkhorse.png">
+                            <span>Darkhorse</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora.png">
+                            <span> &lt;/3</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora2.png">
+                            <span>&lt;/3&sup2;</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/nosty.png">
+                            <span>No Stylist</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/ns+.png">
+                            <span>NS+ (ULTRA)</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/iflkill.png">
+                            <span>If Looks Could Kill</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snp.png">
+                            <span>Snotty World</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/hxmlif.png">
+                            <span>Homixide Lifestyle</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snot.png">
+                            <span>Snot or Not</span>
+                        </div>
+
+                        <div class="opcaoAlbum semBorda">
+                            <img class="imgOpcaoAlbum" src="../assets/img/5th.png">
+                            <span>5TH AMNDMNT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="areaClassificacaoAlbum">
+                    <div class="alinhaNumeroAlbum">
+                        <h2>1 / 19</h2>
+                    </div>
+                    <h2 class="tituloAlbum">In abundance</h2>
+                    <img class="imgAlbumRanking" src="../assets/img/InsAbundance.png">
+                    <h3 class="subTituloRadioButton">Classificação:</h3>
+                    <form>
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoRuim" name="avaliacaoAlbum1" value="Ruim">
+                            <text>Ruim</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoBom" name="avaliacaoAlbum1" value="Bom">
+                            <text>Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMuitoBom" name="avaliacaoAlbum1" value="Muito Bom">
+                            <text>Muito Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMUSIC!" name="avaliacaoAlbum1"
+                                value="MUSIC!">
+                            <text>MUSIC!</text>
+                        </label>
+                    </form>
+
+                    <div class="areaBotao">
+                        <button class="botaoRankingClassificacao voltar" onclick="cancelarRanking()">Cancelar</button>
+                        <button class="botaoRankingClassificacao proximo" onclick="proximoChefe()">Próximo</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="rankingAlbum2" class="rankingAlbum">
+            <h1 class="tituloRankingAlbuns">Ranking dos Albuns</h1>
+            <div class="baseRanking">
+                <div class="listaLateralAlbuns">
+                    <h3>Albuns</h3>
+                    <div class="areaOpcoesAlbum">
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/inAbundance.png">
+                            <span>In abundance</span>
+                        </div>
+
+                        <div class="opcaoAlbum albumSelecionado">
+                            <img class="imgOpcaoAlbum" src="../assets/img/selfTilted.png">
+                            <span>Self Tilted</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/dielit.png">
+                            <span>Die lit</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/wlr.png">
+                            <span>Who lotta red</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/pjX.png">
+                            <span>Project X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/x.png">
+                            <span>X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/xtented.png">
+                            <span>XTENDED</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/agc.png">
+                            <span>A Great Chaos</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/neezus.png">
+                            <span>NezzusDestroyed</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/darkhorse.png">
+                            <span>Darkhorse</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora.png">
+                            <span> &lt;/3</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora2.png">
+                            <span>&lt;/3&sup2;</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/nosty.png">
+                            <span>No Stylist</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/ns+.png">
+                            <span>NS+ (ULTRA)</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/iflkill.png">
+                            <span>If Looks Could Kill</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snp.png">
+                            <span>Snotty World</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/hxmlif.png">
+                            <span>Homixide Lifestyle</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snot.png">
+                            <span>Snot or Not</span>
+                        </div>
+
+                        <div class="opcaoAlbum semBorda">
+                            <img class="imgOpcaoAlbum" src="../assets/img/5th.png">
+                            <span>5TH AMNDMNT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="areaClassificacaoAlbum">
+                    <div class="alinhaNumeroAlbum">
+                        <h2>2 / 19</h2>
+                    </div>
+                    <h2 class="tituloAlbum">Self Tilted</h2>
+                    <img class="imgAlbumRanking" src="../assets/img/selfTilted.jpg">
+                    <h3 class="subTituloRadioButton">Classificação:</h3>
+                    <form>
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoRuim" name="avaliacaoAlbum2" value="Ruim">
+                            <text>Ruim</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoBom" name="avaliacaoAlbum2" value="Bom">
+                            <text>Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMuitoBom" name="avaliacaoAlbum2" value="Muito Bom">
+                            <text>Muito Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMUSIC!" name="avaliacaoAlbum2"
+                                value="MUSIC!">
+                            <text>MUSIC!</text>
+                        </label>
+                    </form>
+
+                    <div class="areaBotao">
+                        <button class="botaoRankingClassificacao voltar" onclick="voltarRanking()">Voltar</button>
+                        <button class="botaoRankingClassificacao proximo" onclick="proximoChefe1()">Próximo</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="rankingAlbum3" class="rankingAlbum">
+            <h1 class="tituloRankingAlbuns">Ranking dos Albuns</h1>
+            <div class="baseRanking">
+                <div class="listaLateralAlbuns">
+                    <h3>Albuns</h3>
+                    <div class="areaOpcoesAlbum">
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/inAbundance.png">
+                            <span>In abundance</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/selfTilted.png">
+                            <span>Self Tilted</span>
+                        </div>
+
+                        <div class="opcaoAlbum  albumSelecionado">
+                            <img class="imgOpcaoAlbum" src="../assets/img/dielit.png">
+                            <span>Die lit</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/wlr.png">
+                            <span>Who lotta red</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/pjX.png">
+                            <span>Project X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/x.png">
+                            <span>X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/xtented.png">
+                            <span>XTENDED</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/agc.png">
+                            <span>A Great Chaos</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/neezus.png">
+                            <span>NezzusDestroyed</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/darkhorse.png">
+                            <span>Darkhorse</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora.png">
+                            <span> &lt;/3</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora2.png">
+                            <span>&lt;/3&sup2;</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/nosty.png">
+                            <span>No Stylist</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/ns+.png">
+                            <span>NS+ (ULTRA)</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/iflkill.png">
+                            <span>If Looks Could Kill</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snp.png">
+                            <span>Snotty World</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/hxmlif.png">
+                            <span>Homixide Lifestyle</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snot.png">
+                            <span>Snot or Not</span>
+                        </div>
+
+                        <div class="opcaoAlbum semBorda">
+                            <img class="imgOpcaoAlbum" src="../assets/img/5th.png">
+                            <span>5TH AMNDMNT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="areaClassificacaoAlbum">
+                    <div class="alinhaNumeroAlbum">
+                        <h2>3 / 19</h2>
+                    </div>
+                    <h2 class="tituloAlbum">Die Lit</h2>
+                    <img class="imgAlbumRanking" src="../assets/img/dielit.jpg">
+                    <h3 class="subTituloRadioButton">Classificação:</h3>
+                    <form>
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoRuim" name="avaliacaoAlbum3" value="Ruim">
+                            <text>Ruim</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoBom" name="avaliacaoAlbum3" value="Bom">
+                            <text>Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMuitoBom" name="avaliacaoAlbum3" value="Muito Bom">
+                            <text>Muito Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMUSIC!" name="avaliacaoAlbum3"
+                                value="MUSIC!">
+                            <text>MUSIC!</text>
+                        </label>
+                    </form>
+
+                    <div class="areaBotao">
+                        <button class="botaoRankingClassificacao voltar" onclick="voltarRanking1()">Voltar</button>
+                        <button class="botaoRankingClassificacao proximo" onclick="proximoChefe2()">Próximo</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="rankingAlbum4" class="rankingAlbum">
+            <h1 class="tituloRankingAlbuns">Ranking dos Álbuns</h1>
+            <div class="baseRanking">
+                <div class="listaLateralAlbuns">
+                    <h3>Albuns</h3>
+                    <div class="areaOpcoesAlbum">
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/inAbundance.png">
+                            <span>In abundance</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/selfTilted.png">
+                            <span>Self Tilted</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/dielit.png">
+                            <span>Die lit</span>
+                        </div>
+
+                        <div class="opcaoAlbum   albumSelecionado">
+                            <img class="imgOpcaoAlbum" src="../assets/img/wlr.png">
+                            <span>Who lotta red</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/pjX.png">
+                            <span>Project X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/x.png">
+                            <span>X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/xtented.png">
+                            <span>XTENDED</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/agc.png">
+                            <span>A Great Chaos</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/neezus.png">
+                            <span>NezzusDestroyed</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/darkhorse.png">
+                            <span>Darkhorse</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora.png">
+                            <span> &lt;/3</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora2.png">
+                            <span>&lt;/3&sup2;</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/nosty.png">
+                            <span>No Stylist</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/ns+.png">
+                            <span>NS+ (ULTRA)</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/iflkill.png">
+                            <span>If Looks Could Kill</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snp.png">
+                            <span>Snotty World</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/hxmlif.png">
+                            <span>Homixide Lifestyle</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snot.png">
+                            <span>Snot or Not</span>
+                        </div>
+
+                        <div class="opcaoAlbum semBorda">
+                            <img class="imgOpcaoAlbum" src="../assets/img/5th.png">
+                            <span>5TH AMNDMNT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="areaClassificacaoAlbum">
+                    <div class="alinhaNumeroAlbum">
+                        <h2>4 / 19</h2>
+                    </div>
+                    <h2 class="tituloAlbum">Who Lotta Red</h2>
+                    <img class="imgAlbumRanking" src="../assets/img/wholottared.jpg">
+                    <h3 class="subTituloRadioButton">Classificação:</h3>
+                    <form>
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoRuim" name="avaliacaoAlbum4" value="Ruim">
+                            <text>Ruim</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoBom" name="avaliacaoAlbum4" value="Bom">
+                            <text>Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMuitoBom" name="avaliacaoAlbum4" value="Muito Bom">
+                            <text>Muito Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMUSIC!" name="avaliacaoAlbum4"
+                                value="MUSIC!">
+                            <text>MUSIC!</text>
+                        </label>
+                    </form>
+
+                    <div class="areaBotao">
+                        <button class="botaoRankingClassificacao voltar" onclick="voltarRanking3()">Voltar</button>
+                        <button class="botaoRankingClassificacao proximo" onclick="proximoChefe3()">Próximo</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="rankingAlbum5" class="rankingAlbum">
+            <h1 class="tituloRankingAlbuns">Ranking dos Álbuns</h1>
+            <div class="baseRanking">
+                <div class="listaLateralAlbuns">
+                    <h3>Albuns</h3>
+                    <div class="areaOpcoesAlbum">
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/inAbundance.png">
+                            <span>In abundance</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/selfTilted.png">
+                            <span>Self Tilted</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/dielit.png">
+                            <span>Die lit</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/wlr.png">
+                            <span>Who lotta red</span>
+                        </div>
+
+                        <div class="opcaoAlbum    albumSelecionado">
+                            <img class="imgOpcaoAlbum" src="../assets/img/pjX.png">
+                            <span>Project X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/x.png">
+                            <span>X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/xtented.png">
+                            <span>XTENDED</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/agc.png">
+                            <span>A Great Chaos</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/neezus.png">
+                            <span>NezzusDestroyed</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/darkhorse.png">
+                            <span>Darkhorse</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora.png">
+                            <span> &lt;/3</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora2.png">
+                            <span>&lt;/3&sup2;</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/nosty.png">
+                            <span>No Stylist</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/ns+.png">
+                            <span>NS+ (ULTRA)</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/iflkill.png">
+                            <span>If Looks Could Kill</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snp.png">
+                            <span>Snotty World</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/hxmlif.png">
+                            <span>Homixide Lifestyle</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snot.png">
+                            <span>Snot or Not</span>
+                        </div>
+
+                        <div class="opcaoAlbum semBorda">
+                            <img class="imgOpcaoAlbum" src="../assets/img/5th.png">
+                            <span>5TH AMNDMNT</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="areaClassificacaoAlbum">
+                    <div class="alinhaNumeroAlbum">
+                        <h2>5 / 19</h2>
+                    </div>
+                    <h2 class="tituloAlbum">Project X</h2>
+                    <img class="imgAlbumRanking" src="../assets/img/projectx.jpg">
+                    <h3 class="subTituloRadioButton">Classificação:</h3>
+                    <form>
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoRuim" name="avaliacaoAlbum5" value="Ruim">
+                            <text>Ruim</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoBom" name="avaliacaoAlbum5" value="Bom">
+                            <text>Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMuitoBom" name="avaliacaoAlbum5" value="Muito Bom">
+                            <text>Muito Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMUSIC!" name="avaliacaoAlbum5"
+                                value="MUSIC!">
+                            <text>MUSIC!</text>
+                        </label>
+                    </form>
+
+                    <div class="areaBotao">
+                        <button class="botaoRankingClassificacao voltar" onclick="voltarRanking4()">Voltar</button>
+                        <button class="botaoRankingClassificacao proximo" onclick="proximoChefe4()">Próximo</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="rankingAlbum6" class="rankingAlbum">
+            <h1 class="tituloRankingAlbuns">Ranking dos Álbuns</h1>
+            <div class="baseRanking">
+                <div class="listaLateralAlbuns">
+                    <h3>Albuns</h3>
+                    <div class="areaOpcoesAlbum">
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/inAbundance.png">
+                            <span>In abundance</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/selfTilted.png">
+                            <span>Self Tilted</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/dielit.png">
+                            <span>Die lit</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/wlr.png">
+                            <span>Who lotta red</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/pjX.png">
+                            <span>Project X</span>
+                        </div>
+
+                        <div class="opcaoAlbum     albumSelecionado">
+                            <img class="imgOpcaoAlbum" src="../assets/img/x.png">
+                            <span>X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/xtented.png">
+                            <span>XTENDED</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/agc.png">
+                            <span>A Great Chaos</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/neezus.png">
+                            <span>NezzusDestroyed</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/darkhorse.png">
+                            <span>Darkhorse</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora.png">
+                            <span> &lt;/3</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora2.png">
+                            <span>&lt;/3&sup2;</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/nosty.png">
+                            <span>No Stylist</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/ns+.png">
+                            <span>NS+ (ULTRA)</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/iflkill.png">
+                            <span>If Looks Could Kill</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snp.png">
+                            <span>Snotty World</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/hxmlif.png">
+                            <span>Homixide Lifestyle</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snot.png">
+                            <span>Snot or Not</span>
+                        </div>
+
+                        <div class="opcaoAlbum semBorda">
+                            <img class="imgOpcaoAlbum" src="../assets/img/5th.png">
+                            <span>5TH AMNDMNT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="areaClassificacaoAlbum">
+                    <div class="alinhaNumeroAlbum">
+                        <h2>6 / 19</h2>
+                    </div>
+                    <h2 class="tituloAlbum">X</h2>
+                    <img class="imgAlbumRanking" src="../assets/img/X.jpg">
+                    <h3 class="subTituloRadioButton">Classificação:</h3>
+                    <form>
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoRuim" name="avaliacaoAlbum6" value="Ruim">
+                            <text>Ruim</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoBom" name="avaliacaoAlbum6" value="Bom">
+                            <text>Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMuitoBom" name="avaliacaoAlbum6" value="Muito Bom">
+                            <text>Muito Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMUSIC!" name="avaliacaoAlbum6"
+                                value="MUSIC!">
+                            <text>MUSIC!</text>
+                        </label>
+                    </form>
+
+                    <div class="areaBotao">
+                        <button class="botaoRankingClassificacao voltar" onclick="voltarRanking5()">Voltar</button>
+                        <button class="botaoRankingClassificacao proximo" onclick="proximoChefe5()">Próximo</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="rankingAlbum7" class="rankingAlbum">
+            <h1 class="tituloRankingAlbuns">Ranking dos Álbuns</h1>
+            <div class="baseRanking">
+                <div class="listaLateralAlbuns">
+                    <h3>Albuns</h3>
+                    <div class="areaOpcoesAlbum">
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/inAbundance.png">
+                            <span>In abundance</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/selfTilted.png">
+                            <span>Self Tilted</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/dielit.png">
+                            <span>Die lit</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/wlr.png">
+                            <span>Who lotta red</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/pjX.png">
+                            <span>Project X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/x.png">
+                            <span>X</span>
+                        </div>
+
+                        <div class="opcaoAlbum     albumSelecionado">
+                            <img class="imgOpcaoAlbum" src="../assets/img/xtented.png">
+                            <span>XTENDED</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/agc.png">
+                            <span>A Great Chaos</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/neezus.png">
+                            <span>NezzusDestroyed</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/darkhorse.png">
+                            <span>Darkhorse</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora.png">
+                            <span> &lt;/3</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora2.png">
+                            <span>&lt;/3&sup2;</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/nosty.png">
+                            <span>No Stylist</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/ns+.png">
+                            <span>NS+ (ULTRA)</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/iflkill.png">
+                            <span>If Looks Could Kill</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snp.png">
+                            <span>Snotty World</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/hxmlif.png">
+                            <span>Homixide Lifestyle</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snot.png">
+                            <span>Snot or Not</span>
+                        </div>
+
+                        <div class="opcaoAlbum semBorda">
+                            <img class="imgOpcaoAlbum" src="../assets/img/5th.png">
+                            <span>5TH AMNDMNT</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="areaClassificacaoAlbum">
+                    <div class="alinhaNumeroAlbum">
+                        <h2>7 / 19</h2>
+                    </div>
+                    <h2 class="tituloAlbum">XTENDED</h2>
+                    <img class="imgAlbumRanking" src="../assets/img/XTended.jpg">
+                    <h3 class="subTituloRadioButton">Classificação:</h3>
+                    <form>
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoRuim" name="avaliacaoAlbum7" value="Ruim">
+                            <text>Ruim</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoBom" name="avaliacaoAlbum7" value="Bom">
+                            <text>Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMuitoBom" name="avaliacaoAlbum7" value="Muito Bom">
+                            <text>Muito Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMUSIC!" name="avaliacaoAlbum7"
+                                value="MUSIC!">
+                            <text>MUSIC!</text>
+                        </label>
+                    </form>
+
+                    <div class="areaBotao">
+                        <button class="botaoRankingClassificacao voltar" onclick="voltarRanking6()">Voltar</button>
+                        <button class="botaoRankingClassificacao proximo" onclick="proximoChefe6()">Próximo</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="rankingAlbum8" class="rankingAlbum">
+            <h1 class="tituloRankingAlbuns">Ranking dos Álbuns</h1>
+            <div class="baseRanking">
+                <div class="listaLateralAlbuns">
+                    <h3>Albuns</h3>
+                    <div class="areaOpcoesAlbum">
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/inAbundance.png">
+                            <span>In abundance</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/selfTilted.png">
+                            <span>Self Tilted</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/dielit.png">
+                            <span>Die lit</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/wlr.png">
+                            <span>Who lotta red</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/pjX.png">
+                            <span>Project X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/x.png">
+                            <span>X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/xtented.png">
+                            <span>XTENDED</span>
+                        </div>
+
+                        <div class="opcaoAlbum    albumSelecionado">
+                            <img class="imgOpcaoAlbum" src="../assets/img/agc.png">
+                            <span>A Great Chaos</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/neezus.png">
+                            <span>NezzusDestroyed</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/darkhorse.png">
+                            <span>Darkhorse</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora.png">
+                            <span> &lt;/3</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora2.png">
+                            <span>&lt;/3&sup2;</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/nosty.png">
+                            <span>No Stylist</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/ns+.png">
+                            <span>NS+ (ULTRA)</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/iflkill.png">
+                            <span>If Looks Could Kill</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snp.png">
+                            <span>Snotty World</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/hxmlif.png">
+                            <span>Homixide Lifestyle</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snot.png">
+                            <span>Snot or Not</span>
+                        </div>
+
+                        <div class="opcaoAlbum semBorda">
+                            <img class="imgOpcaoAlbum" src="../assets/img/5th.png">
+                            <span>5TH AMNDMNT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="areaClassificacaoAlbum">
+                    <div class="alinhaNumeroAlbum">
+                        <h2>8 / 19</h2>
+                    </div>
+                    <h2 class="tituloAlbum">A Great Chaos</h2>
+                    <img class="imgAlbumRanking" src="../assets/img/agc.jpg">
+                    <h3 class="subTituloRadioButton">Classificação:</h3>
+                    <form>
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoRuim" name="avaliacaoAlbum8" value="Ruim">
+                            <text>Ruim</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoBom" name="avaliacaoAlbum8" value="Bom">
+                            <text>Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMuitoBom" name="avaliacaoAlbum8" value="Muito Bom">
+                            <text>Muito Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMUSIC!" name="avaliacaoAlbum8"
+                                value="MUSIC!">
+                            <text>MUSIC!</text>
+                        </label>
+                    </form>
+
+                    <div class="areaBotao">
+                        <button class="botaoRankingClassificacao voltar" onclick="voltarRanking7()">Voltar</button>
+                        <button class="botaoRankingClassificacao proximo" onclick="proximoChefe7()">Próximo</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="rankingAlbum9" class="rankingAlbum">
+            <h1 class="tituloRankingAlbuns">Ranking dos Álbuns</h1>
+            <div class="baseRanking">
+                <div class="listaLateralAlbuns">
+                    <h3>Albuns</h3>
+                    <div class="areaOpcoesAlbum">
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/inAbundance.png">
+                            <span>In abundance</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/selfTilted.png">
+                            <span>Self Tilted</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/dielit.png">
+                            <span>Die lit</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/wlr.png">
+                            <span>Who lotta red</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/pjX.png">
+                            <span>Project X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/x.png">
+                            <span>X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/xtented.png">
+                            <span>XTENDED</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/agc.png">
+                            <span>A Great Chaos</span>
+                        </div>
+
+                        <div class="opcaoAlbum    albumSelecionado">
+                            <img class="imgOpcaoAlbum" src="../assets/img/neezus.png">
+                            <span>NezzusDestroyed</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/darkhorse.png">
+                            <span>Darkhorse</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora.png">
+                            <span> &lt;/3</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora2.png">
+                            <span>&lt;/3&sup2;</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/nosty.png">
+                            <span>No Stylist</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/ns+.png">
+                            <span>NS+ (ULTRA)</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/iflkill.png">
+                            <span>If Looks Could Kill</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snp.png">
+                            <span>Snotty World</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/hxmlif.png">
+                            <span>Homixide Lifestyle</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snot.png">
+                            <span>Snot or Not</span>
+                        </div>
+
+                        <div class="opcaoAlbum semBorda">
+                            <img class="imgOpcaoAlbum" src="../assets/img/5th.png">
+                            <span>5TH AMNDMNT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="areaClassificacaoAlbum">
+                    <div class="alinhaNumeroAlbum">
+                        <h2>9 / 19</h2>
+                    </div>
+                    <h2 class="tituloAlbum">NezzusDestroyed</h2>
+                    <img class="imgAlbumRanking" src="../assets/img/neezus.jpg">
+                    <h3 class="subTituloRadioButton">Classificação:</h3>
+                    <form>
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoRuim" name="avaliacaoAlbum9" value="Ruim">
+                            <text>Ruim</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoBom" name="avaliacaoAlbum9" value="Bom">
+                            <text>Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMuitoBom" name="avaliacaoAlbum9" value="Muito Bom">
+                            <text>Muito Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMUSIC!" name="avaliacaoAlbum9"
+                                value="MUSIC!">
+                            <text>MUSIC!</text>
+                        </label>
+                    </form>
+
+                    <div class="areaBotao">
+                        <button class="botaoRankingClassificacao voltar" onclick="voltarRanking8()">Voltar</button>
+                        <button class="botaoRankingClassificacao proximo" onclick="proximoChefe8()">Próximo</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="rankingAlbum10" class="rankingAlbum">
+            <h1 class="tituloRankingAlbuns">Ranking dos Álbuns</h1>
+            <div class="baseRanking">
+                <div class="listaLateralAlbuns">
+                    <h3>Albuns</h3>
+                    <div class="areaOpcoesAlbum">
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/inAbundance.png">
+                            <span>In abundance</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/selfTilted.png">
+                            <span>Self Tilted</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/dielit.png">
+                            <span>Die lit</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/wlr.png">
+                            <span>Who lotta red</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/pjX.png">
+                            <span>Project X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/x.png">
+                            <span>X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/xtented.png">
+                            <span>XTENDED</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/agc.png">
+                            <span>A Great Chaos</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/neezus.png">
+                            <span>NezzusDestroyed</span>
+                        </div>
+
+                        <div class="opcaoAlbum    albumSelecionado">
+                            <img class="imgOpcaoAlbum" src="../assets/img/darkhorse.png">
+                            <span>Darkhorse</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora.png">
+                            <span> &lt;/3</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora2.png">
+                            <span>&lt;/3&sup2;</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/nosty.png">
+                            <span>No Stylist</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/ns+.png">
+                            <span>NS+ (ULTRA)</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/iflkill.png">
+                            <span>If Looks Could Kill</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snp.png">
+                            <span>Snotty World</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/hxmlif.png">
+                            <span>Homixide Lifestyle</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snot.png">
+                            <span>Snot or Not</span>
+                        </div>
+
+                        <div class="opcaoAlbum semBorda">
+                            <img class="imgOpcaoAlbum" src="../assets/img/5th.png">
+                            <span>5TH AMNDMNT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="areaClassificacaoAlbum">
+                    <div class="alinhaNumeroAlbum">
+                        <h2>10 / 19</h2>
+                    </div>
+                    <h2 class="tituloAlbum">Darkhorse</h2>
+                    <img class="imgAlbumRanking" src="../assets/img/darkhorse.jpg">
+                    <h3 class="subTituloRadioButton">Classificação:</h3>
+                    <form>
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoRuim" name="avaliacaoAlbum10" value="Ruim">
+                            <text>Ruim</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoBom" name="avaliacaoAlbum10" value="Bom">
+                            <text>Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMuitoBom" name="avaliacaoAlbum10" value="Muito Bom">
+                            <text>Muito Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMUSIC!" name="avaliacaoAlbum10"
+                                value="MUSIC!">
+                            <text>MUSIC!</text>
+                        </label>
+                    </form>
+
+                    <div class="areaBotao">
+                        <button class="botaoRankingClassificacao voltar" onclick="voltarRanking9()">Voltar</button>
+                        <button class="botaoRankingClassificacao proximo" onclick="proximoChefe9()">Próximo</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="rankingAlbum11" class="rankingAlbum">
+            <h1 class="tituloRankingAlbuns">Ranking dos Álbuns</h1>
+            <div class="baseRanking">
+                <div class="listaLateralAlbuns">
+                    <h3>Albuns</h3>
+                    <div class="areaOpcoesAlbum">
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/inAbundance.png">
+                            <span>In abundance</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/selfTilted.png">
+                            <span>Self Tilted</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/dielit.png">
+                            <span>Die lit</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/wlr.png">
+                            <span>Who lotta red</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/pjX.png">
+                            <span>Project X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/x.png">
+                            <span>X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/xtented.png">
+                            <span>XTENDED</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/agc.png">
+                            <span>A Great Chaos</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/neezus.png">
+                            <span>NezzusDestroyed</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/darkhorse.png">
+                            <span>Darkhorse</span>
+                        </div>
+
+                        <div class="opcaoAlbum    albumSelecionado">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora.png">
+                            <span> &lt;/3</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora2.png">
+                            <span>&lt;/3&sup2;</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/nosty.png">
+                            <span>No Stylist</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/ns+.png">
+                            <span>NS+ (ULTRA)</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/iflkill.png">
+                            <span>If Looks Could Kill</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snp.png">
+                            <span>Snotty World</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/hxmlif.png">
+                            <span>Homixide Lifestyle</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snot.png">
+                            <span>Snot or Not</span>
+                        </div>
+
+                        <div class="opcaoAlbum semBorda">
+                            <img class="imgOpcaoAlbum" src="../assets/img/5th.png">
+                            <span>5TH AMNDMNT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="areaClassificacaoAlbum">
+                    <div class="alinhaNumeroAlbum">
+                        <h2>11 / 19</h2>
+                    </div>
+                    <h2 class="tituloAlbum">&lt;/3</h2>
+                    <img class="imgAlbumRanking" src="../assets/img/cora.jpg">
+                    <h3 class="subTituloRadioButton">Classificação:</h3>
+                    <form>
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoRuim" name="avaliacaoAlbum11" value="Ruim">
+                            <text>Ruim</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoBom" name="avaliacaoAlbum11" value="Bom">
+                            <text>Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMuitoBom" name="avaliacaoAlbum11" value="Muito Bom">
+                            <text>Muito Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMUSIC!" name="avaliacaoAlbum11"
+                                value="MUSIC!">
+                            <text>MUSIC!</text>
+                        </label>
+                    </form>
+
+                    <div class="areaBotao">
+                        <button class="botaoRankingClassificacao voltar" onclick="voltarRanking10()">Voltar</button>
+                        <button class="botaoRankingClassificacao proximo" onclick="proximoChefe10()">Próximo</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="rankingAlbum12" class="rankingAlbum">
+            <h1 class="tituloRankingAlbuns">Ranking dos Álbuns</h1>
+            <div class="baseRanking">
+                <div class="listaLateralAlbuns">
+                    <h3>Albuns</h3>
+                    <div class="areaOpcoesAlbum">
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/inAbundance.png">
+                            <span>In abundance</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/selfTilted.png">
+                            <span>Self Tilted</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/dielit.png">
+                            <span>Die lit</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/wlr.png">
+                            <span>Who lotta red</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/pjX.png">
+                            <span>Project X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/x.png">
+                            <span>X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/xtented.png">
+                            <span>XTENDED</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/agc.png">
+                            <span>A Great Chaos</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/neezus.png">
+                            <span>NezzusDestroyed</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/darkhorse.png">
+                            <span>Darkhorse</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora.png">
+                            <span> &lt;/3</span>
+                        </div>
+
+                        <div class="opcaoAlbum    albumSelecionado">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora2.png">
+                            <span>&lt;/3&sup2;</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/nosty.png">
+                            <span>No Stylist</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/ns+.png">
+                            <span>NS+ (ULTRA)</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/iflkill.png">
+                            <span>If Looks Could Kill</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snp.png">
+                            <span>Snotty World</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/hxmlif.png">
+                            <span>Homixide Lifestyle</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snot.png">
+                            <span>Snot or Not</span>
+                        </div>
+
+                        <div class="opcaoAlbum semBorda">
+                            <img class="imgOpcaoAlbum" src="../assets/img/5th.png">
+                            <span>5TH AMNDMNT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="areaClassificacaoAlbum">
+                    <div class="alinhaNumeroAlbum">
+                        <h2>12 / 19</h2>
+                    </div>
+                    <h2 class="tituloAlbum">&lt;/3&sup2;</h2>
+                    <img class="imgAlbumRanking" src="../assets/img/coracao2.jpg">
+                    <h3 class="subTituloRadioButton">Classificação:</h3>
+                    <form>
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoRuim" name="avaliacaoAlbum12" value="Ruim">
+                            <text>Ruim</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoBom" name="avaliacaoAlbum12" value="Bom">
+                            <text>Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMuitoBom" name="avaliacaoAlbum12" value="Muito Bom">
+                            <text>Muito Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMUSIC!" name="avaliacaoAlbum12"
+                                value="MUSIC!">
+                            <text>MUSIC!</text>
+                        </label>
+                    </form>
+
+                    <div class="areaBotao">
+                        <button class="botaoRankingClassificacao voltar" onclick="voltarRanking11()">Voltar</button>
+                        <button class="botaoRankingClassificacao proximo" onclick="proximoChefe11()">Próximo</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="rankingAlbum13" class="rankingAlbum">
+            <h1 class="tituloRankingAlbuns">Ranking dos Álbuns</h1>
+            <div class="baseRanking">
+                <div class="listaLateralAlbuns">
+                    <h3>Albuns</h3>
+                    <div class="areaOpcoesAlbum">
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/inAbundance.png">
+                            <span>In abundance</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/selfTilted.png">
+                            <span>Self Tilted</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/dielit.png">
+                            <span>Die lit</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/wlr.png">
+                            <span>Who lotta red</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/pjX.png">
+                            <span>Project X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/x.png">
+                            <span>X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/xtented.png">
+                            <span>XTENDED</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/agc.png">
+                            <span>A Great Chaos</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/neezus.png">
+                            <span>NezzusDestroyed</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/darkhorse.png">
+                            <span>Darkhorse</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora.png">
+                            <span> &lt;/3</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora2.png">
+                            <span>&lt;/3&sup2;</span>
+                        </div>
+
+                        <div class="opcaoAlbum    albumSelecionado">
+                            <img class="imgOpcaoAlbum" src="../assets/img/nosty.png">
+                            <span>No Stylist</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/ns+.png">
+                            <span>NS+ (ULTRA)</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/iflkill.png">
+                            <span>If Looks Could Kill</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snp.png">
+                            <span>Snotty World</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/hxmlif.png">
+                            <span>Homixide Lifestyle</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snot.png">
+                            <span>Snot or Not</span>
+                        </div>
+
+                        <div class="opcaoAlbum semBorda">
+                            <img class="imgOpcaoAlbum" src="../assets/img/5th.png">
+                            <span>5TH AMNDMNT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="areaClassificacaoAlbum">
+                    <div class="alinhaNumeroAlbum">
+                        <h2>13 / 19</h2>
+                    </div>
+                    <h2 class="tituloAlbum">No Stylist</h2>
+                    <img class="imgAlbumRanking" src="../assets/img/nosty.jpg">
+                    <h3 class="subTituloRadioButton">Classificação:</h3>
+                    <form>
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoRuim" name="avaliacaoAlbum13" value="Ruim">
+                            <text>Ruim</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoBom" name="avaliacaoAlbum13" value="Bom">
+                            <text>Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMuitoBom" name="avaliacaoAlbum13" value="Muito Bom">
+                            <text>Muito Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMUSIC!" name="avaliacaoAlbum13"
+                                value="MUSIC!">
+                            <text>MUSIC!</text>
+                        </label>
+                    </form>
+
+                    <div class="areaBotao">
+                        <button class="botaoRankingClassificacao voltar" onclick="voltarRanking12()">Voltar</button>
+                        <button class="botaoRankingClassificacao proximo" onclick="proximoChefe12()">Próximo</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="rankingAlbum14" class="rankingAlbum">
+            <h1 class="tituloRankingAlbuns">Ranking dos Álbuns</h1>
+            <div class="baseRanking">
+                <div class="listaLateralAlbuns">
+                    <h3>Albuns</h3>
+                    <div class="areaOpcoesAlbum">
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/inAbundance.png">
+                            <span>In abundance</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/selfTilted.png">
+                            <span>Self Tilted</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/dielit.png">
+                            <span>Die lit</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/wlr.png">
+                            <span>Who lotta red</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/pjX.png">
+                            <span>Project X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/x.png">
+                            <span>X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/xtented.png">
+                            <span>XTENDED</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/agc.png">
+                            <span>A Great Chaos</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/neezus.png">
+                            <span>NezzusDestroyed</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/darkhorse.png">
+                            <span>Darkhorse</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora.png">
+                            <span> &lt;/3</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora2.png">
+                            <span>&lt;/3&sup2;</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/nosty.png">
+                            <span>No Stylist</span>
+                        </div>
+
+                        <div class="opcaoAlbum    albumSelecionado">
+                            <img class="imgOpcaoAlbum" src="../assets/img/ns+.png">
+                            <span>NS+ (ULTRA)</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/iflkill.png">
+                            <span>If Looks Could Kill</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snp.png">
+                            <span>Snotty World</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/hxmlif.png">
+                            <span>Homixide Lifestyle</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snot.png">
+                            <span>Snot or Not</span>
+                        </div>
+
+                        <div class="opcaoAlbum semBorda">
+                            <img class="imgOpcaoAlbum" src="../assets/img/5th.png">
+                            <span>5TH AMNDMNT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="areaClassificacaoAlbum">
+                    <div class="alinhaNumeroAlbum">
+                        <h2>14 / 19</h2>
+                    </div>
+                    <h2 class="tituloAlbum">NS+ (ULTRA)</h2>
+                    <img class="imgAlbumRanking" src="../assets/img/NS+.jpg">
+                    <h3 class="subTituloRadioButton">Classificação:</h3>
+                    <form>
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoRuim" name="avaliacaoAlbum14" value="Ruim">
+                            <text>Ruim</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoBom" name="avaliacaoAlbum14" value="Bom">
+                            <text>Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMuitoBom" name="avaliacaoAlbum14" value="Muito Bom">
+                            <text>Muito Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMUSIC!" name="avaliacaoAlbum14"
+                                value="MUSIC!">
+                            <text>MUSIC!</text>
+                        </label>
+                    </form>
+
+                    <div class="areaBotao">
+                        <button class="botaoRankingClassificacao voltar" onclick="voltarRanking13()">Voltar</button>
+                        <button class="botaoRankingClassificacao proximo" onclick="proximoChefe13()">Próximo</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="rankingAlbum15" class="rankingAlbum">
+            <h1 class="tituloRankingAlbuns">Ranking dos Álbuns</h1>
+            <div class="baseRanking">
+                <div class="listaLateralAlbuns">
+                    <h3>Albuns</h3>
+                    <div class="areaOpcoesAlbum">
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/inAbundance.png">
+                            <span>In abundance</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/selfTilted.png">
+                            <span>Self Tilted</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/dielit.png">
+                            <span>Die lit</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/wlr.png">
+                            <span>Who lotta red</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/pjX.png">
+                            <span>Project X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/x.png">
+                            <span>X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/xtented.png">
+                            <span>XTENDED</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/agc.png">
+                            <span>A Great Chaos</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/neezus.png">
+                            <span>NezzusDestroyed</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/darkhorse.png">
+                            <span>Darkhorse</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora.png">
+                            <span> &lt;/3</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora2.png">
+                            <span>&lt;/3&sup2;</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/nosty.png">
+                            <span>No Stylist</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/ns+.png">
+                            <span>NS+ (ULTRA)</span>
+                        </div>
+
+                        <div class="opcaoAlbum    albumSelecionado">
+                            <img class="imgOpcaoAlbum" src="../assets/img/iflkill.png">
+                            <span>If Looks Could Kill</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snp.png">
+                            <span>Snotty World</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/hxmlif.png">
+                            <span>Homixide Lifestyle</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snot.png">
+                            <span>Snot or Not</span>
+                        </div>
+
+                        <div class="opcaoAlbum semBorda">
+                            <img class="imgOpcaoAlbum" src="../assets/img/5th.png">
+                            <span>5TH AMNDMNT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="areaClassificacaoAlbum">
+                    <div class="alinhaNumeroAlbum">
+                        <h2>15 / 19</h2>
+                    </div>
+                    <h2 class="tituloAlbum">If Looks Could Kill</h2>
+                    <img class="imgAlbumRanking" src="../assets/img/iflooks.jpg">
+                    <h3 class="subTituloRadioButton">Classificação:</h3>
+                    <form>
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoRuim" name="avaliacaoAlbum15" value="Ruim">
+                            <text>Ruim</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoBom" name="avaliacaoAlbum15" value="Bom">
+                            <text>Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMuitoBom" name="avaliacaoAlbum15" value="Muito Bom">
+                            <text>Muito Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMUSIC!" name="avaliacaoAlbum15"
+                                value="MUSIC!">
+                            <text>MUSIC!</text>
+                        </label>
+                    </form>
+
+                    <div class="areaBotao">
+                        <button class="botaoRankingClassificacao voltar" onclick="voltarRanking14()">Voltar</button>
+                        <button class="botaoRankingClassificacao proximo" onclick="proximoChefe14()">Próximo</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="rankingAlbum16" class="rankingAlbum">
+            <h1 class="tituloRankingAlbuns">Ranking dos Álbuns</h1>
+            <div class="baseRanking">
+                <div class="listaLateralAlbuns">
+                    <h3>Albuns</h3>
+                    <div class="areaOpcoesAlbum">
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/inAbundance.png">
+                            <span>In abundance</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/selfTilted.png">
+                            <span>Self Tilted</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/dielit.png">
+                            <span>Die lit</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/wlr.png">
+                            <span>Who lotta red</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/pjX.png">
+                            <span>Project X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/x.png">
+                            <span>X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/xtented.png">
+                            <span>XTENDED</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/agc.png">
+                            <span>A Great Chaos</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/neezus.png">
+                            <span>NezzusDestroyed</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/darkhorse.png">
+                            <span>Darkhorse</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora.png">
+                            <span> &lt;/3</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora2.png">
+                            <span>&lt;/3&sup2;</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/nosty.png">
+                            <span>No Stylist</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/ns+.png">
+                            <span>NS+ (ULTRA)</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/iflkill.png">
+                            <span>If Looks Could Kill</span>
+                        </div>
+
+                        <div class="opcaoAlbum    albumSelecionado">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snp.png">
+                            <span>Snotty World</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/hxmlif.png">
+                            <span>Homixide Lifestyle</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snot.png">
+                            <span>Snot or Not</span>
+                        </div>
+
+                        <div class="opcaoAlbum semBorda">
+                            <img class="imgOpcaoAlbum" src="../assets/img/5th.png">
+                            <span>5TH AMNDMNT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="areaClassificacaoAlbum">
+                    <div class="alinhaNumeroAlbum">
+                        <h2>16 / 19</h2>
+                    </div>
+                    <h2 class="tituloAlbum">Snotty World</h2>
+                    <img class="imgAlbumRanking" src="../assets/img/snotty.jpg">
+                    <h3 class="subTituloRadioButton">Classificação:</h3>
+                    <form>
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoRuim" name="avaliacaoAlbum16" value="Ruim">
+                            <text>Ruim</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoBom" name="avaliacaoAlbum16" value="Bom">
+                            <text>Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMuitoBom" name="avaliacaoAlbum16" value="Muito Bom">
+                            <text>Muito Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMUSIC!" name="avaliacaoAlbum16"
+                                value="MUSIC!">
+                            <text>MUSIC!</text>
+                        </label>
+                    </form>
+
+                    <div class="areaBotao">
+                        <button class="botaoRankingClassificacao voltar" onclick="voltarRanking15()">Voltar</button>
+                        <button class="botaoRankingClassificacao proximo" onclick="proximoChefe15()">Próximo</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="rankingAlbum17" class="rankingAlbum">
+            <h1 class="tituloRankingAlbuns">Ranking dos Álbuns</h1>
+            <div class="baseRanking">
+                <div class="listaLateralAlbuns">
+                    <h3>Albuns</h3>
+                    <div class="areaOpcoesAlbum">
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/inAbundance.png">
+                            <span>In abundance</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/selfTilted.png">
+                            <span>Self Tilted</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/dielit.png">
+                            <span>Die lit</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/wlr.png">
+                            <span>Who lotta red</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/pjX.png">
+                            <span>Project X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/x.png">
+                            <span>X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/xtented.png">
+                            <span>XTENDED</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/agc.png">
+                            <span>A Great Chaos</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/neezus.png">
+                            <span>NezzusDestroyed</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/darkhorse.png">
+                            <span>Darkhorse</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora.png">
+                            <span> &lt;/3</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora2.png">
+                            <span>&lt;/3&sup2;</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/nosty.png">
+                            <span>No Stylist</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/ns+.png">
+                            <span>NS+ (ULTRA)</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/iflkill.png">
+                            <span>If Looks Could Kill</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snp.png">
+                            <span>Snotty World</span>
+                        </div>
+
+                        <div class="opcaoAlbum    albumSelecionado">
+                            <img class="imgOpcaoAlbum" src="../assets/img/hxmlif.png">
+                            <span>Homixide Lifestyle</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snot.png">
+                            <span>Snot or Not</span>
+                        </div>
+
+                        <div class="opcaoAlbum semBorda">
+                            <img class="imgOpcaoAlbum" src="../assets/img/5th.png">
+                            <span>5TH AMNDMNT</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="areaClassificacaoAlbum">
+                    <div class="alinhaNumeroAlbum">
+                        <h2>17 / 19</h2>
+                    </div>
+                    <h2 class="tituloAlbum">Homixide Lifestyle</h2>
+                    <img class="imgAlbumRanking" src="../assets/img/hmxlif.jpg">
+                    <h3 class="subTituloRadioButton">Classificação:</h3>
+                    <form>
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoRuim" name="avaliacaoAlbum17" value="Ruim">
+                            <text>Ruim</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoBom" name="avaliacaoAlbum17" value="Bom">
+                            <text>Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMuitoBom" name="avaliacaoAlbum17" value="Muito Bom">
+                            <text>Muito Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMUSIC!" name="avaliacaoAlbum17"
+                                value="MUSIC!">
+                            <text>MUSIC!</text>
+                        </label>
+                    </form>
+
+                    <div class="areaBotao">
+                        <button class="botaoRankingClassificacao voltar" onclick="voltarRanking16()">Voltar</button>
+                        <button class="botaoRankingClassificacao proximo" onclick="proximoChefe16()">Próximo</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="rankingAlbum18" class="rankingAlbum">
+            <h1 class="tituloRankingAlbuns">Ranking dos Álbuns</h1>
+            <div class="baseRanking">
+                <div class="listaLateralAlbuns">
+                    <h3>Albuns</h3>
+                    <div class="areaOpcoesAlbum">
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/inAbundance.png">
+                            <span>In abundance</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/selfTilted.png">
+                            <span>Self Tilted</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/dielit.png">
+                            <span>Die lit</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/wlr.png">
+                            <span>Who lotta red</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/pjX.png">
+                            <span>Project X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/x.png">
+                            <span>X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/xtented.png">
+                            <span>XTENDED</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/agc.png">
+                            <span>A Great Chaos</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/neezus.png">
+                            <span>NezzusDestroyed</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/darkhorse.png">
+                            <span>Darkhorse</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora.png">
+                            <span> &lt;/3</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora2.png">
+                            <span>&lt;/3&sup2;</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/nosty.png">
+                            <span>No Stylist</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/ns+.png">
+                            <span>NS+ (ULTRA)</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/iflkill.png">
+                            <span>If Looks Could Kill</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snp.png">
+                            <span>Snotty World</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/hxmlif.png">
+                            <span>Homixide Lifestyle</span>
+                        </div>
+
+                        <div class="opcaoAlbum    albumSelecionado">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snot.png">
+                            <span>Snot or Not</span>
+                        </div>
+
+                        <div class="opcaoAlbum semBorda">
+                            <img class="imgOpcaoAlbum" src="../assets/img/5th.png">
+                            <span>5TH AMNDMNT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="areaClassificacaoAlbum">
+                    <div class="alinhaNumeroAlbum">
+                        <h2>18 / 19</h2>
+                    </div>
+                    <h2 class="tituloAlbum">Snot or Not</h2>
+                    <img class="imgAlbumRanking" src="../assets/img/snotornot.jpg">
+                    <h3 class="subTituloRadioButton">Classificação:</h3>
+                    <form>
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoRuim" name="avaliacaoAlbum18" value="Ruim">
+                            <text>Ruim</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoBom" name="avaliacaoAlbum18" value="Bom">
+                            <text>Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMuitoBom" name="avaliacaoAlbum18" value="Muito Bom">
+                            <text>Muito Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMUSIC!" name="avaliacaoAlbum18"
+                                value="MUSIC!">
+                            <text>MUSIC!</text>
+                        </label>
+                    </form>
+
+                    <div class="areaBotao">
+                        <button class="botaoRankingClassificacao voltar" onclick="voltarRanking17()">Voltar</button>
+                        <button class="botaoRankingClassificacao proximo" onclick="proximoChefe17()">Próximo</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="rankingAlbum19" class="rankingAlbum">
+            <h1 class="tituloRankingAlbuns">Ranking dos Álbuns</h1>
+            <div class="baseRanking">
+                <div class="listaLateralAlbuns">
+                    <h3>Albuns</h3>
+                    <div class="areaOpcoesAlbum">
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/inAbundance.png">
+                            <span>In abundance</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/selfTilted.png">
+                            <span>Self Tilted</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/dielit.png">
+                            <span>Die lit</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/wlr.png">
+                            <span>Who lotta red</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/pjX.png">
+                            <span>Project X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/x.png">
+                            <span>X</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/xtented.png">
+                            <span>XTENDED</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/agc.png">
+                            <span>A Great Chaos</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/neezus.png">
+                            <span>NezzusDestroyed</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/darkhorse.png">
+                            <span>Darkhorse</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora.png">
+                            <span> &lt;/3</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/cora2.png">
+                            <span>&lt;/3&sup2;</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/nosty.png">
+                            <span>No Stylist</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/ns+.png">
+                            <span>NS+ (ULTRA)</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/iflkill.png">
+                            <span>If Looks Could Kill</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snp.png">
+                            <span>Snotty World</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/hxmlif.png">
+                            <span>Homixide Lifestyle</span>
+                        </div>
+
+                        <div class="opcaoAlbum">
+                            <img class="imgOpcaoAlbum" src="../assets/img/snot.png">
+                            <span>Snot or Not</span>
+                        </div>
+
+                        <div class="opcaoAlbum semBorda    albumSelecionado">
+                            <img class="imgOpcaoAlbum" src="../assets/img/5th.png">
+                            <span>5TH AMNDMNT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="areaClassificacaoAlbum">
+                    <div class="alinhaNumeroAlbum">
+                        <h2>19 / 19</h2>
+                    </div>
+                    <h2 class="tituloAlbum">5TH AMNDMNT</h2>
+                    <img class="imgAlbumRanking" src="../assets/img/5th amndmnt album.jpg">
+                    <h3 class="subTituloRadioButton">Classificação:</h3>
+                    <form>
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoRuim" name="avaliacaoAlbum19" value="Ruim">
+                            <text>Ruim</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoBom" name="avaliacaoAlbum19" value="Bom">
+                            <text>Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMuitoBom" name="avaliacaoAlbum19" value="Muito Bom">
+                            <text>Muito Bom</text>
+                        </label>
+
+                        <label class="radioButton">
+                            <input type="radio" id="avaliacaoMUSIC!" name="avaliacaoAlbum19"
+                                value="MUSIC!">
+                            <text>MUSIC!</text>
+                        </label>
+                    </form>
+
+                    <div class="areaBotao">
+                        <button class="botaoRankingClassificacao voltar" onclick="voltarRanking18()">Voltar</button>
+                        <button id="btnEnviar" class="botaoRankingClassificacao proximo"
+                            onclick="certezafinalizarRanking()">Finalizar</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="fundoModal">
+            <div class="modal">
+                <img src="../assets/img/opVamp.png">
+                <h1>FInalizar Ranking?</h1>
+                <span>Você está prestes a finalizar o seu ranking. Você tem certeza disso?</span>
+                <div class="areaBotao">
+                    <button class="botaoRankingClassificacao voltar" onclick="voltarParaRanking()">Cancelar</button>
+                    <button class="botaoRankingClassificacao enviar" onclick="inserirVotoUsuario()">Finalizar</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="baseTelaTabelaRanking">
+            <h1>Sua Tabela do Ranking</h1>
+            <p>
+                Essa é a sua tabela de ranking dos albuns de acordo com a suas respostas.
+            </p>
+            <div class="areaTabela">
+                <table class="tabelaRanking">
+
+                    <thead>
+                        <tr>
+                            <th class="colunaFoto">Foto</th>
+                            <th>Nome</th>
+                            <th>Dificuldade</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="corpoTabela">
+                    </tbody>
+
+                </table>
+            </div>
+
+
+            <div class="areaBotao">
+                <button class="botaotabelaRanking voltar"
+                    onclick="deletarDadosRanking(sessionStorage.ID_USUARIO)">Refazer</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+<script src="../js/ranking.js"></script>
+<script>
+    var idUsuarioVar = sessionStorage.ID_USUARIO;
+    nomeUsuario.innerHTML = sessionStorage.NOME_USUARIO;
+    var escolhasAvaliacao = []
+
+    const btnEnviar = document.getElementById('btnEnviar');
+
+
+    function inserirVotoUsuario() {
+        try {
+            for (var i = 1; i <= 19; i++) {
+                escolhas = document.querySelector(`input[name="avaliacaoAlbum${i}"]:checked`).value;
+                escolhasAvaliacao.push(escolhas)
+            }
+
+            for (var j = 1; j <= 19; j++) {
+                var avaliacaoAlbum = escolhasAvaliacao[j - 1];
+                var albumVar = j
+                enviarAvaliacao(idUsuarioVar, albumVar, avaliacaoAlbum);
+            }
+
+            finalizarRanking();
+            setTimeout(() => {
+                window.location.reload()
+            }, 1000)
+            return true;
+        } catch (error) {
+            alert('Você não votou em todos os albums!')
+        }
+    }
+
+    async function enviarAvaliacao(id, album, avaliacao) {
+        await fetch("/votoUsuario/inserirVotoUsuario", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                idUsuarioServer: id,
+                albumServer: album,
+                avaliacaoAlbumServer: avaliacao
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                console.log(resposta)
+            } else {
+                throw ("Deu erro ao inserir os votos do usuário");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        })
+    }
+
+    function deletarDadosRanking(fkUsuario) {
+        fetch(`/votoUsuario/deletarDadosRanking/${fkUsuario}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            }
+
+        }).then(function (resposta) {
+
+            if (resposta.ok) {
+                console.log("Dados do ranking deletados com sucesso");
+                verificarUsuarioRanking(sessionStorage.ID_USUARIO)
+            } else if (resposta.status == 404) {
+                window.alert("Deu 404!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+    }
+
+    function verificarUsuarioRanking(fkUsuario) {
+        fetch(`/votoUsuario/verificarUsuarioRanking/${fkUsuario}`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        }).then(function (resposta) {
+
+            if (resposta.ok) {
+                resposta.json().then((json) => {
+                    if (json[0].quantidadeLinha > 0) {
+                        exibirRanking()
+                        obterRanking()
+                    } else {
+                        voltarPaginaInicial()
+                    }
+                })
+            } else if (resposta.status == 404) {
+                window.alert("Deu 404!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+    }
+
+</script>

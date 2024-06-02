@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    scrollbar-width: thin;
+    scrollbar-color: black transparent;
+    background-color: black;
+  }
+  
+body::-webkit-scrollbar {
+    width: 8px;
+    height: 3px; 
+}
+  
+body::-webkit-scrollbar-track {
+    background: transparent;
+    padding: 2px;
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: #63A0BF;
+}
+
+.menuLateral {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    height: 100vh;
+    width: 12vw;
+    border-right: 2px solid grey; 
+}
+
+.menuLateral a{
+    color: red;
+    text-decoration: none;
+}
+
+.selecionado {
+    background-color: white;
+}
+
+#imgLogoSistema {
+    width: 130px;
+    margin: 25px 0 40px 0;
+}
+
+.botoesMenu {
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.botao {
+    width: 200px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px 0 0 10px;
+    margin-bottom: 20px;
+}
+
+.iconMenuLateral {
+    width: 50px;
+    margin: 0 15px;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    width: 88vw;
+    height: 100vh;
+}
+
+.menuTopo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 88vw;
+    height: 8vh;
+}
+
+.perfil {
+    border: 2px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    width: 200px;
+    height: 35px;
+    margin-right: 30px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.perfil summary {
+    margin-top: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menuPerfil {
+    height: 50px;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    border-radius: 0 0 10px 10px;
+    background-color: white;
+    margin-top: 5px;
+    z-index: 1;
+}
+
+.opcaoMenuPerfil {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.opcaoMenuPerfil span{
+    font-weight: 500;
+}
+
+.corLogout {
+    color: #FF0000;
+}
+
+#imgIconConfig {
+    width: 30px;
+    margin: 0 5px 0 10px;
+}
+
+.menuTopo a{
+    color: black;
+    text-decoration: none;
+}
+
+#imgLogoTopo {
+    width: 150px;
+    margin-left: 30px;
+}
+
+#imgPessoaTopo {
+    width: 30px;
+}
+
+#imgSetaTopo {
+    width: 20px;
+}
+
+#conteudoPrincipal {
+    width: 88vw;
+    height: 92vh;
+}

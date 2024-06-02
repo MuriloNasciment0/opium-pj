@@ -1,32 +1,49 @@
 var usuarioModel = require("../models/usuarioModel");
 
-function autenticar(req, res) {
+var sessoes = [];
+
+function testar(req, res) {
+    console.log("ENTRAMOS NA usuarioController");
+    res.json("ESTAMOS FUNCIONANDO!");
+}
+
+function listar(req, res) {
+    usuarioModel.listar()
+        .then(function (resultado) {
+            if (resultado.length > 0) {
+                res.status(200).json(resultado);
+            } else {
+                res.status(204).send("Nenhum resultado encontrado!")
+            }
+        }).catch(
+            function (erro) {
+                console.log(erro);
+                console.log("Houve um erro ao realizar a consulta! Erro: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+
+function entrar(req, res) {
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
-    var nome = req.body.nomeServer;
 
     if (email == undefined) {
         res.status(400).send("Seu email está undefined!");
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está indefinida!");
     } else {
-
-        usuarioModel.autenticar(email, senha, nome)
+        
+        usuarioModel.entrar(email, senha)
             .then(
-                function (resultadoAutenticar) {
-                    console.log(`\nResultados encontrados: ${resultadoAutenticar.length}`);
-                    console.log(`Resultados: ${JSON.stringify(resultadoAutenticar)}`); // transforma JSON em String
+                function (resultado) {
+                    console.log(`\nResultados encontrados: ${resultado.length}`);
+                    console.log(`Resultados: ${JSON.stringify(resultado)}`); // transforma JSON em String
 
-                    if (resultadoAutenticar.length == 1) {
-                        console.log(resultadoAutenticar);
-                        if(resultadoAutenticar.length > 0){
-                            res.json({
-                                email: resultadoAutenticar[0].email,
-                                senha: resultadoAutenticar[0].senha,
-                                nome: resultadoAutenticar[0].nome
-                            })
-                        }
-                    } else if (resultadoAutenticar.length == 0) {
+                    if (resultado.length == 1) {
+                        console.log(resultado);
+                        res.json(resultado[0]);
+                    } else if (resultado.length == 0) {
                         res.status(403).send("Email e/ou senha inválido(s)");
                     } else {
                         res.status(403).send("Mais de um usuário com o mesmo login e senha!");
@@ -57,7 +74,7 @@ function cadastrar(req, res) {
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está undefined!");
     } else {
-
+        
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
         usuarioModel.cadastrar(nome, email, senha)
             .then(
@@ -78,6 +95,8 @@ function cadastrar(req, res) {
 }
 
 module.exports = {
-    autenticar,
-    cadastrar
+    entrar,
+    cadastrar,
+    listar,
+    testar
 }

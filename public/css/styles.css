@@ -42,9 +42,9 @@ body {
 
 }
 
-.opium-logo{
-width: 20%;
-display: flex;
+.opium-logo {
+    width: 20%;
+    display: flex;
 }
 
 .navbar {
@@ -107,7 +107,8 @@ button.button-login:hover {
 }
 
 
-.button-login, .button-cadastro {
+.button-login,
+.button-cadastro {
     font-family: 'Poppins', sans-serif;
     background-color: black;
     color: #fff;
@@ -121,7 +122,8 @@ button.button-login:hover {
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
-.button-login:hover, .button-cadastro:hover {
+.button-login:hover,
+.button-cadastro:hover {
     background-color: var(--cinza-basico);
     color: black;
     transform: scale(1.1);
@@ -151,7 +153,7 @@ button.button-login:hover {
 
 .seta-icon {
     width: 190px;
-    position: relative; 
+    position: relative;
     left: 800px;
     top: 70px;
 
@@ -164,42 +166,73 @@ button.button-login:hover {
     animation-direction: alternate;
 }
 
-.conceito-opium{
+.video-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+#video-player {
+    width: 100%;
+    height: 100%;
+    max-width: 100vw;
+    max-height: 100vh;
+    object-fit: cover;
+    outline: none;
+}
+
+.fade-out {
+    animation: fadeOut 1s forwards;
+}
+
+.fade-in {
+    animation: fadeIn 1s forwards;
+}
+
+.conceito-opium {
     background-color: black;
     width: 100%;
 }
 
-.div-texto{
+.div-texto {
     padding-top: 50px;
     padding-bottom: 50px;
     background-color: black;
     color: white;
     width: 100%;
     text-align: center;
+    font-size: 50px;
 }
 
-.container-conceito{
+.container-conceito {
     display: flex;
     justify-content: center;
     gap: 500px;
 }
 
-.gif-opium{
+.gif-opium {
     width: 500px;
 }
 
 
-.texto-conceito{
+.texto-conceito {
     max-width: 400px;
     text-align: center;
 }
 
-.opium-na-moda{
+.opium-na-moda {
     background-color: black;
     color: white;
 }
 
-.titulo-op-moda{
+.titulo-op-moda {
     display: flex;
     justify-content: center;
     padding-top: 50px;
@@ -208,13 +241,64 @@ button.button-login:hover {
     color: white;
     width: 100%;
     text-align: center;
+    margin-bottom: 50px;
+    font-size: 50px;
 }
 
-.texto-op-moda{
+.container-Fitcards {
     display: flex;
+    flex-direction: row; 
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 10%;
+}
+
+.card-fit1 {
+    width: 272px;
+    height: 441px;
+    background-color: gray;
+    margin: 0 10px 10px 0;
+}
+
+.video-fit1 {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+
+.card-fit2 {
+    width: 315px;
+    height: 600px; 
+    background-color: gray;
+    margin: 0 10px 10px 0;
+    transform: translateY(-50px); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.video-fit2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+
+.card-fit3 {
+    width: 272px;
+    height: 441px;
+    background-color: gray;
+    margin: 0 10px 10px 0;
+}
+
+.texto-op-moda {
+    display: flex;
+    flex-direction: column;
     width: 547px;
     height: 302px;
     margin-left: 1200px;
+    margin-bottom: -300px;
 }
 
 .container-carrousel {
@@ -222,6 +306,7 @@ button.button-login:hover {
     padding: 15px;
     max-width: 1240px;
     margin: 100px auto;
+    margin-top: -10px;
 }
 
 
@@ -251,18 +336,18 @@ button.button-login:hover {
     /* Ajuste a margem esquerda conforme necessário */
 }
 
-.arrow-right{
+.arrow-right {
     left: auto;
     right: -70px;
     padding-top: 7px;
 
 }
 
-.container-carrousel button img{
+.container-carrousel button img {
     width: 40px;
 }
 
-.gallery-wrapper{
+.gallery-wrapper {
     overflow-x: auto;
 }
 
@@ -272,7 +357,7 @@ button.button-login:hover {
     transition: all 600ms ease-in-out;
 }
 
-.current-item{
+.current-item {
     opacity: 1;
 }
 
@@ -280,16 +365,17 @@ button.button-login:hover {
     display: none;
 }
 
-.texto-members{
+.texto-members {
     padding-top: 50px;
     padding-bottom: 50px;
     background-color: black;
     color: white;
     width: 100%;
     text-align: center;
+    font-size: 50px;
 }
 
-.container-cards{
+.container-cards {
     display: flex;
     justify-content: center;
     gap: 28px;
@@ -304,12 +390,12 @@ button.button-login:hover {
     cursor: pointer;
 }
 
-.card:hover{
+.card:hover {
     transform: scale(1.1);
     filter: grayscale(0);
 }
 
-.artist-img{
+.artist-img {
     width: 448px;
     height: 778px;
 
@@ -318,100 +404,142 @@ button.button-login:hover {
     filter: grayscale(100%);
 }
 
-.artist-img:hover{
+.artist-img:hover {
     filter: grayscale(0);
 }
 
-/* .containerr-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    justify-items: center;
+.faca-seu-ranking{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    height: 80vh;
+    margin-top: 70px;
 }
 
-
-.containerr-cards > * {
-    margin-bottom: 20px;
+.titulo-Ranking {
+    text-align: center;
+    margin-bottom: 20px; 
 }
 
-.containerr-cards > *:nth-child(1n) {
-    margin-right: -440px;
+.title-ranking{
+    font-size: 50px;
 }
 
-.containerr-cards > *:nth-child(2n) {
-    margin-left: -930px;
-}
-
-.card1{
-    position: relative;
-    width: 424px;
-    height: 424px;
-    border-radius: 10px;
-    box-shadow: 0 0 0 1px var(--cinza-subtitulo), 0 0 0 1px var(--cinza-subtitulo) inset;
-    transition:  transform 0.3s ease-in-out;
+.imagem-ranking img {
+    max-width: 100%; 
+    height: auto;
     cursor: pointer;
 }
-.card1:hover{
-    transform: scale(1.1);
-} */
 
-/* 
-.card2:hover{
-    transform: scale(1.1);
-}
 
-.artistt-img{
-    width: 424px;
-    height: 424px;
-    border-radius: 10px;
-}
-
-.texto {
-    font-size: 12px;
-
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
+footer {
+    margin-top: 200px;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    box-sizing: border-box;
-    text-align: center;
-    border-radius: 0 0 10px 10px;
+    height: 70%;
+    color: white;
+    border-top: 1px solid var(--cinza-subtitulo);
+}
 
-} */
+.opfooter-symbol{
+    width: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 77px;
+}
 
+#footer_content{
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    pad: 3rem 3.5rem;
+}
 
+#footer_contacts, .logo-contacts, .title-contacts{
+    margin-bottom: 0.75rem;
+    margin-left: 1.5rem;
+    color: white;
+    font-size: 26px;
+}
 
+#footer_social_media{
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+}
+
+#footer_social_media .footer-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+#instagram, #twitter, #linkedin {
+    background: linear-gradient(#555, black, white);
+}
+
+#footer_social_media .footer-link i{
+    font-size: 1.5rem;
+}
+
+#footer_social_media .footer-link:hover {
+    opacity: 0.8;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+}
+
+.footer-list .footer-link:hover{
+    color: red;
+    transition: all 0.4s;
+}
 
 
 ::-webkit-scrollbar {
     width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-  }
+}
 
-  @keyframes move {
-    0%{
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@keyframes move {
+    0% {
         top: 0px;
     }
 
-    100%{
+    100% {}
+}
 
+@keyframes fadeOut {
+    to {
+        opacity: 0;
     }
-  }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+}

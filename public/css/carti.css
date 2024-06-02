@@ -1,0 +1,164 @@
+.artistHome {
+    background-image: url('../assets/img/playboicartiHome.jpg');
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(100%);
+
+}
+
+.titleAlbum{
+    font-size: 50px;
+}
+
+.home-contentArtist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 640px;
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Cor de fundo com transparência */
+    position: relative;
+    right: 650px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.home-contentArtist p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    color: black;
+}
+
+.conteudo-Artist {
+    width: 456px;
+    height: 539px;
+}
+
+.seta-iconArtist {
+    width: 190px;
+    position: absolute;
+    left: 85%;
+    top: 70px;
+    margin-top: 700px;
+
+    cursor: pointer;
+
+    animation-name: move;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.albunsArtist {
+    margin: 20px;
+}
+
+.albunsArtist h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header-album {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.album-cover {
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.album-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.album-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.album-info span {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.album-info p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.spotify-album {
+    margin-top: 100px;
+    margin-left: auto;
+    width: 60%;
+}
+
+.spotify-text {
+    width: 50%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 76px;
+    line-height: 1.5;
+    position: relative;
+    bottom: 230px;
+}
+
+@keyframes move {
+    0% {
+        top: 0px;
+    }
+
+    100% {}
+}
+
+.header-album {
+    animation: appear ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0% cover 50%
+}
+
+.spotify-text, .spotify-album{
+    animation: appearRight ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0% cover 23%
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: -100vw 0;
+    }
+
+    to {
+        opacity: 1;
+        transform: 0 0;
+    }
+}
+
+
+@keyframes appearRight {
+    from {
+        opacity: 0;
+        transform: transformX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: transformX(0);
+    }
+}
