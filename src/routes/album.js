@@ -11,9 +11,9 @@ router.get("/listar", function (req, res) {
     albumController.listar(req, res);
 });
 
-router.post("/exibirRanking", function (req, res) {
-    albumController.exibirRanking(req, res);
-})
+// router.post("/exibirRanking", function (req, res) {
+//     albumController.exibirRanking(req, res);
+// })
 
 router.get("/exibirAlbumMelhorAvaliado", function (req, res) {
     albumController.exibirAlbumMelhorAvaliado(req, res);

@@ -30,7 +30,18 @@ app.use("/votoUsuario", votoRouter);
 app.use("/album", albumRouter);
 
 app.listen(PORTA_APP, function () {
-    console.log(`Servidor do seu site já está rodando! Acesse o caminho a seguir para visualizar: http://${HOST_APP}:${PORTA_APP} \n
+    console.log(`
+        ▒█████   ██▓███   ██▓ █    ██  ███▄ ▄███▓   
+        ▒██▒  ██▒▓██░  ██▒▓██▒ ██  ▓██▒▓██▒▀█▀ ██▒    ##      ##
+        ▒██░  ██▒▓██░ ██▓▒▒██▒▓██  ▒██░▓██    ▓██░      ## ##                                          
+        ▒██   ██░▒██▄█▓▒ ▒░██░▓▓█  ░██░▒██    ▒██     #########                                                    
+        ░ ████▓▒░▒██▒ ░  ░░██░▒▒█████▓ ▒██▒   ░██▒      ## ##
+        ░ ▒░▒░▒░ ▒▓▒░ ░  ░░▓  ░▒▓▒ ▒ ▒ ░ ▒░   ░ 🩸░   ##     ##
+          ░ ▒ ▒░ ░▒ ░      ▒ ░░░▒░ ░ ░ ░  ░     🩸░   
+        ░ ░ ░ ▒  ░░        ▒ ░ ░░░ ░ ░ ░      ░      
+            ░ ░            ░     ░            ░                                                         
+    \n\n\n                                                                                                 
+    Servidor do seu site já está rodando! Acesse o caminho a seguir para visualizar: http://${HOST_APP}:${PORTA_APP} \n
     Você está rodando sua aplicação em Ambiente de ${process.env.AMBIENTE_PROCESSO} \n
     \t\tSe "desenvolvimento", você está se conectando ao banco LOCAL (MySQL Workbench). \n
     \t\tSe "producao", você está se conectando ao banco REMOTO (SQL Server em nuvem Azure) \n

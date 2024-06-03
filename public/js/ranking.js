@@ -203,11 +203,11 @@ function finalizarRanking() {
     document.getElementById("rankingAlbum19").style.display = "none"
 }
 
-function exibirRanking() {
-    // document.getElementById("baseTelaTabelaRanking").style.display = "flex"
-    document.getElementById("rankingAlbum1").style.display = "none"
-    document.getElementById("conteudoPrincipal").style.display = "none"
-}
+// function exibirRanking() {
+//     // document.getElementById("baseTelaTabelaRanking").style.display = "flex"
+//     document.getElementById("rankingAlbum1").style.display = "none"
+//     document.getElementById("conteudoPrincipal").style.display = "none"
+// }
 
 function voltarPaginaInicial() {
     // document.getElementById("baseTelaTabelaRanking").style.display = "none"
@@ -224,36 +224,36 @@ function voltarParaRanking() {
 var fkUsuarioVar = sessionStorage.ID_USUARIO;
 console.log("ID_USUARIO da sessionStorage: ", fkUsuarioVar);
 
-async function obterRanking() {
-    await fetch("/album/exibirRanking", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            fkUsuarioServer: fkUsuarioVar
-        })
+// async function obterRanking() {
+//     await fetch("/album/exibirRanking", {
+//         method: "POST",
+//         headers: {
+//             "Content-Type": "application/json"
+//         },
+//         body: JSON.stringify({
+//             fkUsuarioServer: fkUsuarioVar
+//         })
 
-    }).then((resposta) => {
-        if (resposta.ok) {
-            console.log(resposta)
-            corpoTabela.innerHTML = ""
-            resposta.json().then((tabela) => {
-                tabela.forEach(linha => {
-                    document.getElementById('corpoTabela').innerHTML += `
-                    <tr>
-                        <td><img class="imgAlbumTabela" src="${linha.foto}"></td>
-                        <td>${linha.nome}</td>
-                        <td>${linha.avaliacao}</td>
-                    </tr>
-                    `
-                });
-            })
-        } else {
-            console.log('Deu erro no then')
-        }
-    })
-}
+//     }).then((resposta) => {
+//         if (resposta.ok) {
+//             console.log(resposta)
+//             corpoTabela.innerHTML = ""
+//             resposta.json().then((tabela) => {
+//                 tabela.forEach(linha => {
+//                     document.getElementById('corpoTabela').innerHTML += `
+//                     <tr>
+//                         <td><img class="imgAlbumTabela" src="${linha.foto}"></td>
+//                         <td>${linha.nome}</td>
+//                         <td>${linha.avaliacao}</td>
+//                     </tr>
+//                     `
+//                 });
+//             })
+//         } else {
+//             console.log('Deu erro no then')
+//         }
+//     })
+// }
 
 
 

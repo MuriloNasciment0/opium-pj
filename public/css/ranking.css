@@ -13,11 +13,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #FFCF10;
+    background-color: rgb(139, 0, 0);
     width: 1046px;
     height: 50px;
     border-radius: 0 0 10px 10px;
     cursor: pointer;
+    color: white;
 }
 
 #conteudoPrincipal h1 {
@@ -55,7 +56,7 @@ h1, p{
     height: 82%;
     border: 3px solid white;
     border-radius: 15px;
-    box-shadow: -8px 8px 4px #A0E1C0;
+    box-shadow: -8px 8px 4px red;
 }
 
 span{
@@ -113,9 +114,10 @@ span{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     height: 100%;
     width: 85%;
+    margin: auto;
 }
 
 .tituloAlbum {
@@ -133,6 +135,7 @@ span{
 
 .alinhaNumeroAlbum h2 {
         margin-right: 30px;
+        color: white;
 }
 
 .imgAlbumRanking {
@@ -162,15 +165,25 @@ form {
     border: 2px solid rgb(167, 167, 167);
     width: 150px;
     height: 45px;
-    border-radius: 20px;
-    box-shadow: -2px 2px 2px #cbcbcb;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    color: #333; 
+}
+
+.radioButton:hover {
+    background-color: red; 
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px); 
+    color: white;
 }
 
 .areaBotao {
     display: flex;
     justify-content: space-evenly;
     width: 80%;
+    margin-top: 70px;
 }
 
 
@@ -182,10 +195,12 @@ form {
     border-radius: 10px;
     border: none;
     cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .botaoRankingClassificacao:hover {
     border: 2px solid black;
+    transform: translateY(-2px);
 }
 
 
@@ -194,7 +209,7 @@ form {
 }
 
 .proximo {
-    background-color: rgb(15, 152, 203, 0.65);
+    background-color: rgba(139, 147, 150, 0.65);
 }
 
 .subTituloRadioButton {

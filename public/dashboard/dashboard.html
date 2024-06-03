@@ -75,7 +75,7 @@
             </div>
 
             <div class="quadradoDados dificil">
-                <h3>Álbum mais bem avaliado:</h3>
+                <h3>Álbum com a maior nota:</h3>
                 <div id="conteudoAlbumMaisOuvido" class="conteudoKPI">
                     <img class="imgAlbumDashMaisMenos" src="../assets/img/Die_Lit.png">
                     <div class="areaNumero">
@@ -85,7 +85,7 @@
             </div>
 
             <div class="quadradoDados facil">
-                <h3>Álbum menos avaliado:</h3>
+                <h3>Álbum com a menor nota:</h3>
                 <div id="conteudoAlbumMenosOuvido" class="conteudoKPI">
                     <img class="imgAlbumDashMaisMenos" src="../assets/img/5th amndmnt album.jpg">
                     <div class="areaNumero">
@@ -98,7 +98,7 @@
         <div class="areaGraficos">
             <div class="quadradoGrafico">
                 <div class="tituloGrafico">
-                    <img src="../assets/img/iconRanking.png">
+                    <img src="../assets/img/opium-symbol-ast.png">
                     <span>TOP 10 melhores álbuns</span>
                 </div>
                 <div class="areaGrafico">
@@ -125,7 +125,7 @@
 <script>
     nomeUsuario.innerHTML = sessionStorage.NOME_USUARIO;
 
-    // Gráfico dos top 10 chefes
+    // Gráfico dos top 10 albums
     var album = [];
     var avaliacao = [];
 
@@ -137,7 +137,7 @@
             "Content-Type": "application/json"
         }
     }).then(function (resposta) {
-        
+
         if (resposta.ok) {
             resposta.json().then((json) => {
                 console.log(json)
@@ -165,16 +165,16 @@
                     data: [avaliacao[0], avaliacao[1], avaliacao[2], avaliacao[3], avaliacao[4], avaliacao[5], avaliacao[6], avaliacao[7], avaliacao[8], avaliacao[9], 0],
                     borderWidth: 1,
                     backgroundColor: [
-                        'rgb(255, 99, 132)',
-                        'rgb(54, 162, 235)',
-                        'rgb(255, 205, 86)',
-                        'rgb(255, 100, 86)',
-                        'rgb(65,105,225)',
-                        'rgb(0,206,209)',
-                        'rgb(218,165,32)',
-                        'rgb(255,255,0)',
-                        'rgb(240,128,128)',
-                        'rgb(255,99,71)'
+                        'rgb(50, 50, 50)',    
+                        'rgb(70, 70, 70)',   
+                        'rgb(90, 90, 90)',   
+                        'rgb(110, 110, 110)', 
+                        'rgb(30, 30, 30)',   
+                        'rgb(20, 20, 20)',  
+                        'rgb(45, 45, 45)',    
+                        'rgb(60, 60, 60)',   
+                        'rgb(80, 80, 80)',    
+                        'rgb(100, 100, 100)'  
                     ],
                 }]
             },
@@ -184,7 +184,11 @@
                         beginAtZero: true
                     }
                 }
-            }
+            },
+            x: {
+                    stacked: true, 
+                    maxBarThickness: 60 // Ajuste a largura máxima das barras
+                }
         });
     }
     // // Gráfico de albuns por região

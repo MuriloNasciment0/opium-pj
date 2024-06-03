@@ -10,18 +10,18 @@ body {
     scrollbar-width: thin;
     scrollbar-color: black transparent;
     background-color: black;
-  }
-  
+}
+
 body::-webkit-scrollbar {
     width: 8px;
-    height: 3px; 
+    height: 3px;
 }
-  
+
 body::-webkit-scrollbar-track {
     background: transparent;
     padding: 2px;
 }
-  
+
 body::-webkit-scrollbar-thumb {
     background-color: #63A0BF;
 }
@@ -31,18 +31,21 @@ body::-webkit-scrollbar-thumb {
     flex-direction: column;
     align-items: center;
     background-color: black;
-    height: 100vh;
+    height: 110vh;
     width: 12vw;
-    border-right: 2px solid grey; 
+    border-right: 2px solid grey;
+    background: linear-gradient(135deg, #333, #444);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+
 }
 
-.menuLateral a{
+.menuLateral a {
     color: red;
     text-decoration: none;
 }
 
 .selecionado {
-    background-color: white;
+    background-color: #555;
 }
 
 #imgLogoSistema {
@@ -70,7 +73,9 @@ body::-webkit-scrollbar-thumb {
 .iconMenuLateral {
     width: 50px;
     margin: 0 15px;
+    filter: brightness(0) invert(1);
 }
+
 
 .conteudo {
     display: flex;
@@ -125,7 +130,7 @@ body::-webkit-scrollbar-thumb {
     padding: 10px 0;
 }
 
-.opcaoMenuPerfil span{
+.opcaoMenuPerfil span {
     font-weight: 500;
 }
 
@@ -138,7 +143,7 @@ body::-webkit-scrollbar-thumb {
     margin: 0 5px 0 10px;
 }
 
-.menuTopo a{
+.menuTopo a {
     color: black;
     text-decoration: none;
 }

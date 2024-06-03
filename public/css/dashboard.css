@@ -15,7 +15,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
     width: 88vw;
-    height: 72vh;
+    height: 78vh;
 }
 
 .quadradoDados {
@@ -25,7 +25,7 @@ body {
     align-items: center;
     background-color: white;
     border-radius: 15px;
-    width: 28%;
+    width: 20%;
     height: 100%;
     box-shadow: -5px 5px 4px rgb(0, 0, 0, 0.25);
 }
@@ -34,11 +34,16 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #383737;
+    background-color: white;
     border-radius: 15px;
-    width: 45%;
-    height: 90%;
-    box-shadow: -5px 5px 4px rgb(0, 0, 0, 0.25);
+    width: 68%;
+    height: 95%;
+    box-shadow: -5px 5px 4px rgba(245, 3, 3, 0.25);
+}
+
+.quadradoDados,
+.quadradoGrafico {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .conteudoKPI {
@@ -53,7 +58,7 @@ body {
     font-weight: 700;
 }
 
-.subtituloUsuario{
+.subtituloUsuario {
     font-size: 15px;
 }
 
@@ -64,18 +69,18 @@ body {
 }
 
 .dificil {
-    background-color: #FF7474;
+    background-color: rgba(245, 3, 3, 0.671);
 }
 
 .facil {
-    background-color: #74FE82;
+    background-color: gray;
 }
 
 .imgAlbumDashMaisMenos {
     width: 120px;
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
-                0 6px 20px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+        0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .nomeChefe {
@@ -93,10 +98,10 @@ body {
     justify-content: center;
     width: 80%;
     height: 20%;
-    color: white;
+    color: black;
 }
 
-.tituloGrafico span{
+.tituloGrafico span {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -116,3 +121,15 @@ body {
 canvas {
     width: 100%;
 }
+
+.quadradoDados:hover,
+.quadradoGrafico:hover {
+    transform: translateY(-5px);
+    box-shadow: -5px 10px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+} */

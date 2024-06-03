@@ -9,16 +9,16 @@ function listar() {
     return database.executar(instrucao);
 }
 
-function exibirRanking(fkUsuario) {
-    var instrucao = `
-    SELECT album.foto, album.nome, votoUsuario.avaliacao FROM album JOIN votoUsuario
-    ON fkAlbum = idAlbum
-    WHERE fkUsuario = ${fkUsuario}
-    ORDER BY FIELD(avaliacao, 'Ruim', 'Bom', 'Muito Bom', 'MUSIC!');
-    `;
-    console.log("Executando a instrução SQL: \n" + instrucao);
-    return database.executar(instrucao);
-}
+// function exibirRanking(fkUsuario) {
+//     var instrucao = `
+//     SELECT album.foto, album.nome, votoUsuario.avaliacao FROM album JOIN votoUsuario
+//     ON fkAlbum = idAlbum
+//     WHERE fkUsuario = ${fkUsuario}
+//     ORDER BY FIELD(avaliacao, 'Ruim', 'Bom', 'Muito Bom', 'MUSIC!');
+//     `;
+//     console.log("Executando a instrução SQL: \n" + instrucao);
+//     return database.executar(instrucao);
+// }
 
 // função
 function exibirAlbumMelhorAvaliado() {
@@ -44,7 +44,7 @@ function exibirAlbumMenosAvaliado() {
 }
 
 module.exports = {
-    exibirRanking,
+    // exibirRanking,
     listar,
     exibirAlbumMelhorAvaliado,
     exibirAlbumMenosAvaliado

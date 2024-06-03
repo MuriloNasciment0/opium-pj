@@ -24,23 +24,23 @@ function listar(req, res) {
         );
 }
 
-function exibirRanking(req, res) {
-    var fkUsuario = req.body.fkUsuarioServer
-    if (fkUsuario == undefined) {
-        res.status(400).send('A fk do usuário não foi enviada!')
-    } else {
-        albumModel.exibirRanking(fkUsuario).then((resultado) => {
-            if (resultado.length > 0) {
-                res.status(200).json(resultado)
-            } else {
-                res.status(204).send('Não chegou nenhum resultado!')
-            }
-        }).catch((erro) => {
-            console.log(erro)
-            res.status(500).json(erro.sqlMessage)
-        })
-    }
-}
+// function exibirRanking(req, res) {
+//     var fkUsuario = req.body.fkUsuarioServer
+//     if (fkUsuario == undefined) {
+//         res.status(400).send('A fk do usuário não foi enviada!')
+//     } else {
+//         albumModel.exibirRanking(fkUsuario).then((resultado) => {
+//             if (resultado.length > 0) {
+//                 res.status(200).json(resultado)
+//             } else {
+//                 res.status(204).send('Não chegou nenhum resultado!')
+//             }
+//         }).catch((erro) => {
+//             console.log(erro)
+//             res.status(500).json(erro.sqlMessage)
+//         })
+//     }
+// }
 
 function exibirAlbumMelhorAvaliado(req, res) {
 
@@ -75,7 +75,7 @@ function exibirAlbumMenosAvaliado(req, res) {
 
 
 module.exports = {
-    exibirRanking,
+    // exibirRanking,
     listar,
     testar,
     exibirAlbumMelhorAvaliado,
