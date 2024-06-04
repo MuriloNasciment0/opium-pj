@@ -106,9 +106,9 @@
                 </div>
             </div>
 
-            <!-- <div class="quadradoGrafico">
+            <div class="quadradoGrafico">
                 <div class="tituloGrafico">
-                    <img src="../assets/img/iconIlha.png">
+                    <img src="../assets/img/music-album_26789 (1).png">
                     <span>Porcentagem de genêros</span>
                 </div>
                 <div class="areaGrafico">
@@ -116,7 +116,7 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 
 </body>
 
@@ -165,16 +165,16 @@
                     data: [avaliacao[0], avaliacao[1], avaliacao[2], avaliacao[3], avaliacao[4], avaliacao[5], avaliacao[6], avaliacao[7], avaliacao[8], avaliacao[9], 0],
                     borderWidth: 1,
                     backgroundColor: [
-                        'rgb(50, 50, 50)',    
-                        'rgb(70, 70, 70)',   
-                        'rgb(90, 90, 90)',   
-                        'rgb(110, 110, 110)', 
-                        'rgb(30, 30, 30)',   
-                        'rgb(20, 20, 20)',  
-                        'rgb(45, 45, 45)',    
-                        'rgb(60, 60, 60)',   
-                        'rgb(80, 80, 80)',    
-                        'rgb(100, 100, 100)'  
+                        'rgb(50, 50, 50)',
+                        'rgb(70, 70, 70)',
+                        'rgb(90, 90, 90)',
+                        'rgb(110, 110, 110)',
+                        'rgb(30, 30, 30)',
+                        'rgb(20, 20, 20)',
+                        'rgb(45, 45, 45)',
+                        'rgb(60, 60, 60)',
+                        'rgb(80, 80, 80)',
+                        'rgb(100, 100, 100)'
                     ],
                 }]
             },
@@ -186,75 +186,75 @@
                 }
             },
             x: {
-                    stacked: true, 
-                    maxBarThickness: 60 // Ajuste a largura máxima das barras
-                }
+                stacked: true,
+                maxBarThickness: 60 // Ajuste a largura máxima das barras
+            }
         });
     }
-    // // Gráfico de albuns por região
-    // var genero = []
-    // const ctx2 = document.getElementById('myChart2')
+    // Gráfico de albuns por região
+    var genero = []
+    const ctx2 = document.getElementById('myChart2')
 
-    // fetch(`/votoUsuario/albumPorGenero`, {
-    //     method: "GET",
-    //     headers: {
-    //         "Content-Type": "application/json"
-    //     }
-    // }).then(function (resposta) {
+    fetch(`/votoUsuario/albumPorGenero`, {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    }).then(function (resposta) {
 
-    //     if (resposta.ok) {
-    //         resposta.json().then((json) => {
-    //             console.log(json)
-    //             var soma = json[0].quantidadeAvaliacao + json[1].quantidadeAvaliacao + json[2].quantidadeAvaliacao + json[3].quantidadeAvaliacao
-    //             var genero2Percentual = (json[0].quantidadeAvaliacao / soma) * 100
-    //             var generoInfernalPercentual = (json[1].quantidadeAvaliacao / soma) * 100
-    //             var genero3Percentual = (json[2].quantidadeAvaliacao / soma) * 100
-    //             var genero1Percentual = (json[3].quantidadeAvaliacao / soma) * 100
+        if (resposta.ok) {
+            resposta.json().then((json) => {
+                console.log(json)
+                var soma = json[0].quantidadeAvaliacao + json[1].quantidadeAvaliacao + json[2].quantidadeAvaliacao + json[3].quantidadeAvaliacao
+                var genero2Percentual = (json[0].quantidadeAvaliacao / soma) * 100
+                var generoInfernalPercentual = (json[1].quantidadeAvaliacao / soma) * 100
+                var genero3Percentual = (json[2].quantidadeAvaliacao / soma) * 100
+                var genero1Percentual = (json[3].quantidadeAvaliacao / soma) * 100
 
-    //             genero.push(Math.round(genero2Percentual))
-    //             genero.push(Math.round(generoInfernalPercentual))
-    //             genero.push(Math.round(genero3Percentual))
-    //             genero.push(Math.round(genero1Percentual))
-    //         }).then(() => {
-    //             carregarGrafico()
-    //         })
-    //     } else if (resposta.status == 404) {
-    //         window.alert("Deu 404!");
-    //     }
-    // }).catch(function (resposta) {
-    //     console.log(`#ERRO: ${resposta}`);
-    // });
+                genero.push(Math.round(genero2Percentual))
+                genero.push(Math.round(generoInfernalPercentual))
+                genero.push(Math.round(genero3Percentual))
+                genero.push(Math.round(genero1Percentual))
+            }).then(() => {
+                carregarGrafico()
+            })
+        } else if (resposta.status == 404) {
+            window.alert("Deu 404!");
+        }
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+    });
 
 
-    // function carregarGrafico() {
-    //     new Chart(ctx2, {
-    //         type: 'doughnut',
-    //         data: {
-    //             labels: ['Rage', 'Trap', 'Rock', 'Cyber trap'],
-    //             datasets: [{
-    //                 label: '# of Votes',
-    //                 data: [genero[0], genero[1], genero[2], genero[3]],
-    //                 backgroundColor: [
-    //                     'rgb(255, 99, 132)',
-    //                     'rgb(54, 162, 235)',
-    //                     'rgb(255, 205, 86)',
-    //                     'rgb(255, 100, 86)'
-    //                 ],
-    //                 hoverOffset: 4
-    //             }]
-    //         },
-    //         options: {
-    //             plugins: {
-    //                 datalabels: {
-    //                     color: 'white',
-    //                     formatter: function (value, context) {
-    //                         return Math.round(value / context.chart.getDatasetMeta(0).total * 100) + "%";
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //     });
-    // }
+    function carregarGrafico() {
+        new Chart(ctx2, {
+            type: 'doughnut',
+            data: {
+                labels: ['Rage', 'Trap', 'Trap Rock', 'Cyber trap'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [genero[0], genero[1], genero[2], genero[3]],
+                    backgroundColor: [
+                        'rgb(75, 0, 130)',   
+                        'rgb(139, 0, 0)',    
+                        'rgb(70, 70, 70)',
+                        'rgb(47, 79, 79)'
+                    ],
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                plugins: {
+                    datalabels: {
+                        color: 'white',
+                        formatter: function (value, context) {
+                            return Math.round(value / context.chart.getDatasetMeta(0).total * 100) + "%";
+                        }
+                    }
+                }
+            }
+        });
+    }
 
 
 </script>

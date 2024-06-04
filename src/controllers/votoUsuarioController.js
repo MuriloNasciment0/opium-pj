@@ -114,21 +114,21 @@ function exibirQtdUserRanking(req, res) {
 //         );
 // }
 
-// function albumPorGenero(req, res) {
-//     votoUsuarioModel.albumPorGenero()
-//         .then(
-//             function (resultado) {
-//                 res.json(resultado);
-//             }
-//         )
-//         .catch(
-//             function (erro) {
-//                 console.log(erro);
-//                 console.log("Houve um erro nos dados do album: ", erro.sqlMessage);
-//                 res.status(500).json(erro.sqlMessage);
-//             }
-//         );
-// }
+function albumPorGenero(req, res) {
+    votoUsuarioModel.albumPorGenero()
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
+        )
+        .catch(
+            function (erro) {
+                console.log(erro);
+                console.log("Houve um erro nos dados do album: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
 
 function top10Albuns(req, res) {
     votoUsuarioModel.top10Albuns()
@@ -153,6 +153,6 @@ module.exports = {
     exibirQtdUserRanking,
     // deletarDadosRanking,
     // verificarUsuarioRanking,
-    // albumPorGenero,
+    albumPorGenero,
     top10Albuns
 }

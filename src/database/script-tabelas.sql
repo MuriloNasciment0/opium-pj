@@ -40,9 +40,9 @@ INSERT INTO album VALUES
     (null, '../assets/img/darkhorse.jpg', 'Darkhorse', 'Trap'),
     (null, '../assets/img/cora.jpg', '&lt;/3', 'Cyber Trap'),
     (null, '../assets/img/coracao2.jpg', '&lt;/3&sup2;', 'Cyber Trap'),
-    (null, '../assets/img/nosty.jpg"', 'No Stylist', 'Cyber Trap'),
-    (null, '../assets/img/NS+.jpg', 'NS+ (ULTRA)', 'Cyber Trap'),
-    (null, '../assets/img/iflooks.jpg', 'If Looks Could Kill', 'Rock'),
+    (null, '../assets/img/nosty.jpg"', 'No Stylist', 'Rage'),
+    (null, '../assets/img/NS+.jpg', 'NS+ (ULTRA)', 'Rage'),
+    (null, '../assets/img/iflooks.jpg', 'If Looks Could Kill', 'Trap Rock'),
     (null, '../assets/img/snotty.jpg', 'Snotty World', 'Trap'),
     (null, '../assets/img/hmxlif.jpg', 'Homixide Lifestyle', 'Rage'),
     (null, '../assets/img/snotornot.jpg', 'Snot or Not', 'Rage'),
@@ -201,6 +201,10 @@ INSERT INTO votoUsuario VALUES
 	(null, 5, 17, 'Bom'),
 	(null, 5, 18, 'Ruim'),
 	(null, 5, 19, 'MUSIC!');    
+    
+    
+    SELECT COUNT(DISTINCT fkUsuario) as quantidadeUsuario FROM votoUsuario;
+    
     
     
     
