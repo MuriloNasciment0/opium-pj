@@ -18,12 +18,12 @@ function voltarRanking1() {
     document.getElementById("rankingAlbum3").style.display = "none"
 }
 
-function proximoChefe() {
+function proximoAlbum() {
     document.getElementById("rankingAlbum2").style.display = "flex"
     document.getElementById("rankingAlbum1").style.display = "none"
 }
 
-function proximoChefe1() {
+function proximoAlbum1() {
     document.getElementById("rankingAlbum3").style.display = "flex"
     document.getElementById("rankingAlbum2").style.display = "none"
 }
@@ -33,7 +33,7 @@ function voltarRanking2() {
     document.getElementById("rankingAlbum4").style.display = "none"
 }
 
-function proximoChefe2() {
+function proximoAlbum2() {
     document.getElementById("rankingAlbum4").style.display = "flex"
     document.getElementById("rankingAlbum3").style.display = "none"
 }
@@ -43,7 +43,7 @@ function voltarRanking3() {
     document.getElementById("rankingAlbum4").style.display = "none"
 }
 
-function proximoChefe3() {
+function proximoAlbum3() {
     document.getElementById("rankingAlbum5").style.display = "flex"
     document.getElementById("rankingAlbum4").style.display = "none"
 }
@@ -53,7 +53,7 @@ function voltarRanking4() {
     document.getElementById("rankingAlbum5").style.display = "none"
 }
 
-function proximoChefe4() {
+function proximoAlbum4() {
     document.getElementById("rankingAlbum6").style.display = "flex"
     document.getElementById("rankingAlbum5").style.display = "none"
 }
@@ -63,7 +63,7 @@ function voltarRanking5() {
     document.getElementById("rankingAlbum6").style.display = "none"
 }
 
-function proximoChefe5() {
+function proximoAlbum5() {
     document.getElementById("rankingAlbum7").style.display = "flex"
     document.getElementById("rankingAlbum6").style.display = "none"
 }
@@ -73,7 +73,7 @@ function voltarRanking6() {
     document.getElementById("rankingAlbum7").style.display = "none"
 }
 
-function proximoChefe6() {
+function proximoAlbum6() {
     document.getElementById("rankingAlbum8").style.display = "flex"
     document.getElementById("rankingAlbum7").style.display = "none"
 }
@@ -83,7 +83,7 @@ function voltarRanking7() {
     document.getElementById("rankingAlbum8").style.display = "none"
 }
 
-function proximoChefe7() {
+function proximoAlbum7() {
     document.getElementById("rankingAlbum9").style.display = "flex"
     document.getElementById("rankingAlbum8").style.display = "none"
 }
@@ -93,7 +93,7 @@ function voltarRanking8() {
     document.getElementById("rankingAlbum9").style.display = "none"
 }
 
-function proximoChefe8() {
+function proximoAlbum8() {
     document.getElementById("rankingAlbum10").style.display = "flex"
     document.getElementById("rankingAlbum9").style.display = "none"
 }
@@ -103,7 +103,7 @@ function voltarRanking9() {
     document.getElementById("rankingAlbum10").style.display = "none"
 }
 
-function proximoChefe9() {
+function proximoAlbum9() {
     document.getElementById("rankingAlbum11").style.display = "flex"
     document.getElementById("rankingAlbum10").style.display = "none"
 }
@@ -113,7 +113,7 @@ function voltarRanking10() {
     document.getElementById("rankingAlbum11").style.display = "none"
 }
 
-function proximoChefe10() {
+function proximoAlbum10() {
     document.getElementById("rankingAlbum12").style.display = "flex"
     document.getElementById("rankingAlbum11").style.display = "none"
 }
@@ -123,7 +123,7 @@ function voltarRanking11() {
     document.getElementById("rankingAlbum12").style.display = "none"
 }
 
-function proximoChefe11() {
+function proximoAlbum11() {
     document.getElementById("rankingAlbum13").style.display = "flex"
     document.getElementById("rankingAlbum12").style.display = "none"
 }
@@ -133,7 +133,7 @@ function voltarRanking12() {
     document.getElementById("rankingAlbum13").style.display = "none"
 }
 
-function proximoChefe12() {
+function proximoAlbum12() {
     document.getElementById("rankingAlbum14").style.display = "flex"
     document.getElementById("rankingAlbum13").style.display = "none"
 }
@@ -143,7 +143,7 @@ function voltarRanking13() {
     document.getElementById("rankingAlbum14").style.display = "none"
 }
 
-function proximoChefe13() {
+function proximoAlbum13() {
     document.getElementById("rankingAlbum15").style.display = "flex"
     document.getElementById("rankingAlbum14").style.display = "none"
 }
@@ -153,7 +153,7 @@ function voltarRanking14() {
     document.getElementById("rankingAlbum15").style.display = "none"
 }
 
-function proximoChefe14() {
+function proximoAlbum14() {
     document.getElementById("rankingAlbum16").style.display = "flex"
     document.getElementById("rankingAlbum15").style.display = "none"
 }
@@ -163,7 +163,7 @@ function voltarRanking15() {
     document.getElementById("rankingAlbum16").style.display = "none"
 }
 
-function proximoChefe15() {
+function proximoAlbum15() {
     document.getElementById("rankingAlbum17").style.display = "flex"
     document.getElementById("rankingAlbum16").style.display = "none"
 }
@@ -173,7 +173,7 @@ function voltarRanking16() {
     document.getElementById("rankingAlbum17").style.display = "none"
 }
 
-function proximoChefe16() {
+function proximoAlbum16() {
     document.getElementById("rankingAlbum18").style.display = "flex"
     document.getElementById("rankingAlbum17").style.display = "none"
 }
@@ -183,7 +183,7 @@ function voltarRanking17() {
     document.getElementById("rankingAlbum18").style.display = "none"
 }
 
-function proximoChefe17() {
+function proximoAlbum17() {
     document.getElementById("rankingAlbum19").style.display = "flex"
     document.getElementById("rankingAlbum18").style.display = "none"
 }
