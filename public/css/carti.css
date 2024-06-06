@@ -42,6 +42,10 @@
     height: 539px;
 }
 
+.carti-text {
+    text-align: justify;
+}
+
 .seta-iconArtist {
     width: 190px;
     position: absolute;

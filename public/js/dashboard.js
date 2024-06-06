@@ -71,3 +71,5 @@ document.addEventListener('DOMContentLoaded',()=> {
     })
 })
 
+// Os dados que vem select são armazenados nessa json;
+// A estrutura do JSON depende diretamente do resultado da consulta SQL executada pela função votoUsuarioModel.exibirQtdUserRanking().

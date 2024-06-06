@@ -224,7 +224,7 @@ button.button-login:hover {
 
 .texto-conceito {
     max-width: 400px;
-    text-align: center;
+    text-align: justify;
 }
 
 .opium-na-moda {
@@ -243,6 +243,10 @@ button.button-login:hover {
     text-align: center;
     margin-bottom: 50px;
     font-size: 50px;
+}
+
+.texto-opium-moda {
+    text-align: justify;
 }
 
 .container-Fitcards {
