@@ -203,14 +203,12 @@ function finalizarRanking() {
 }
 
 function voltarPaginaInicial() {
-    // document.getElementById("baseTelaTabelaRanking").style.display = "none"
     document.getElementById("conteudoPrincipal").style.display = "flex"
 }
 
 
 function voltarParaRanking() {
     document.getElementById("rankingAlbum19").style.display = "flex"
-    // document.getElementById("baseTelaTabelaRanking").style.display = "none"
     document.getElementById("fundoModal").style.display = "none"
 }
 
@@ -218,3 +216,61 @@ var fkUsuarioVar = sessionStorage.ID_USUARIO;
 console.log("ID_USUARIO da sessionStorage: ", fkUsuarioVar);
 
 
+var idUsuarioVar = sessionStorage.ID_USUARIO;
+nomeUsuario.innerHTML = sessionStorage.NOME_USUARIO;
+var escolhasAvaliacao = []
+
+const btnEnviar = document.getElementById('btnEnviar');
+
+
+function inserirVotoUsuario() {
+    try {
+        for (var contadorVotos = 1; 
+            contadorVotos <= 19; 
+            contadorVotos++) {
+            escolhas = document.querySelector(`input[name="avaliacaoAlbum${contadorVotos}"]:checked`).value;
+            escolhasAvaliacao.push(escolhas)
+        }
+
+        for (var contadorAvaliacao = 1; 
+            contadorAvaliacao <= 19; 
+            contadorAvaliacao++) {
+            var avaliacaoAlbum = escolhasAvaliacao[contadorAvaliacao - 1];
+            var albumVar = contadorAvaliacao
+            enviarAvaliacao(idUsuarioVar, albumVar, avaliacaoAlbum);
+        }
+
+        finalizarRanking();
+        setTimeout(() => {
+            window.location = "dashboard.html";
+        }, 1000)
+        return true;
+    } catch (error) {
+        alert('Você não votou em todos os albums!')
+    }
+}
+
+async function enviarAvaliacao(id, album, avaliacao) {
+    await fetch("/votoUsuario/inserirVotoUsuario", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            idUsuarioServer: id,
+            albumServer: album,
+            avaliacaoAlbumServer: avaliacao
+        })
+    }).then(function (resposta) {
+
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+            console.log(resposta)
+        } else {
+            throw ("Deu erro ao inserir os votos do usuário");
+        }
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+    })
+}

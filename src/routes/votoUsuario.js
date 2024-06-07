@@ -19,10 +19,6 @@ router.get("/exibirQtdUserRanking", function (req, res) {
     votoUsuarioController.exibirQtdUserRanking(req, res);
 })
 
-// router.get("/albumPorGenero", function (req, res) {
-//     votoUsuarioController.albumPorGenero(req, res);
-// })
-
 router.get("/top10Albuns", function (req, res) {
     votoUsuarioController.top10Albuns(req, res);
 })

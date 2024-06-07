@@ -88,11 +88,6 @@ body {
         0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
-.nomeChefe {
-    font-weight: 700;
-    font-size: 40px;
-}
-
 .quadradoGrafico img {
     width: 100px;
 }
@@ -132,9 +127,3 @@ canvas {
     transform: translateY(-5px);
     box-shadow: -5px 10px 8px rgba(0, 0, 0, 0.25);
 }
-
-/* h3 {
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 10px;
-} */

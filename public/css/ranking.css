@@ -46,7 +46,7 @@ body {
     font-size: 45px;
 }
 
-h1, p{
+h1, p {
     color: white;
 }
 
@@ -58,55 +58,8 @@ h1, p{
     border-radius: 5px;
 }
 
-span{
+span {
     color: white;
-}
-
-.listaLateralAlbuns {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 20%;
-    height: 100%;
-    border-right: 3px solid white;
-}
-
-.listaLateralAlbuns h3 {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    font-size: 25px;
-    border-bottom: 2px solid white;
-}
-
-.areaOpcoesAlbum {
-    display: flex;
-    flex-direction: column;
-    overflow-y: scroll;
-    height: 95%;
-    width: 100%;
-    border-radius: 0 0 0 15px;
-}
-
-.opcaoAlbum {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid white;
-    cursor: pointer;    
-}
-
-.opcaoAlbum span{
-    margin-left: 15px;
-}
-
-.imgOpcaoAlbum {
-    width: 58px;
-    margin: 5px 0 5px 15px;
-}
-
-.semBorda {
-    border: none;
 }
 
 .areaClassificacaoAlbum {
@@ -133,19 +86,19 @@ span{
 }
 
 .alinhaNumeroAlbum h2 {
-        margin-right: 30px;
-        color: white;
+    margin-right: 30px;
+    color: white;
 }
 
 .imgAlbumRanking {
     width: 320px;
     height: 320px;
-    border-radius: 10px; 
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
                 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
-#nomeUsuario{
+#nomeUsuario {
     color: black;
 }
 
@@ -185,7 +138,6 @@ form {
     margin-top: 70px;
 }
 
-
 .botaoRankingClassificacao {
     font-size: 20px;
     font-weight: 700;
@@ -202,7 +154,6 @@ form {
     transform: translateY(-2px);
 }
 
-
 .voltar {
     background-color: rgb(203, 15, 17, 0.65);
 }
@@ -216,7 +167,7 @@ form {
     color: white;
 }
 
-.rankingAlbum{
+.rankingAlbum {
     display: none;
     flex-direction: column;
     align-items: center;
@@ -229,7 +180,7 @@ form {
     background-color: #e6e6e6;
 }
 
-#baseTelaTabelaRanking{
+#baseTelaTabelaRanking {
     font-weight: 500;
     display: none;
     flex-direction: column;
@@ -302,7 +253,6 @@ th {
     box-shadow: -5px 5px black;
     border-radius: 10px;
 }
-
 
 #fundoModal {
     display: none;
