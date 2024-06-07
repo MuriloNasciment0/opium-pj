@@ -30,16 +30,16 @@ function exibirQtdUserRanking() {
 
 
 
-function albumPorGenero() {
-    var instrucao = `
-    SELECT album.genero, COUNT(avaliacao) as quantidadeAvaliacao FROM votoUsuario JOIN album
-    ON fkAlbum = idAlbum
-    WHERE avaliacao LIKE 'MUSIC!'
-    GROUP BY album.genero ORDER BY quantidadeAvaliacao;
-    `;
-    console.log("Executando a instrução SQL: \n" + instrucao);
-    return database.executar(instrucao);
-}
+// function albumPorGenero() {
+//     var instrucao = `
+//     SELECT album.genero, COUNT(avaliacao) as quantidadeAvaliacao FROM votoUsuario JOIN album
+//     ON fkAlbum = idAlbum
+//     WHERE avaliacao LIKE 'MUSIC!'
+//     GROUP BY album.genero ORDER BY quantidadeAvaliacao;
+//     `;
+//     console.log("Executando a instrução SQL: \n" + instrucao);
+//     return database.executar(instrucao);
+// }
 
 function top10Albuns() {
     var instrucao = `
@@ -56,6 +56,6 @@ module.exports = {
     inserirVotoUsuario,
     listar,
     exibirQtdUserRanking,
-    albumPorGenero,
+    // albumPorGenero,
     top10Albuns
 };

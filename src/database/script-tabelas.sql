@@ -151,5 +151,3 @@ INSERT INTO votoUsuario (fkUsuario, fkAlbum, avaliacao) VALUES
     (5, 17, 'Bom'),
     (5, 18, 'Ruim'),
     (5, 19, 'MUSIC!');
-
-select * from usuario;
