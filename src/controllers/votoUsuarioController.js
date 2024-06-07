@@ -38,7 +38,7 @@ function inserirVotoUsuario(req, res) {
     } else if (avaliacaoAlbum == undefined) {
         res.status(400).send("O  do album está undefined!");
     } else {
-        
+
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
         votoUsuarioModel.inserirVotoUsuario(idUsuario, album, avaliacaoAlbum)
             .then(
@@ -59,60 +59,23 @@ function inserirVotoUsuario(req, res) {
 }
 
 function exibirQtdUserRanking(req, res) {
-        
-        votoUsuarioModel.exibirQtdUserRanking()
-            .then(
-                function (resultado) {
-                    res.json(resultado);
-                }
-            ).catch(
-                function (erro) {
-                    console.log(erro);
-                    console.log(
-                        "\nHouve um erro ao realizar o cadastro! Erro: ",
-                        erro.sqlMessage
-                    );
-                    res.status(500).json(erro.sqlMessage);
-                }
-            );
+
+    votoUsuarioModel.exibirQtdUserRanking()
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
+        ).catch(
+            function (erro) {
+                console.log(erro);
+                console.log(
+                    "\nHouve um erro ao realizar o cadastro! Erro: ",
+                    erro.sqlMessage
+                );
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
 }
-
-// function deletarDadosRanking(req, res) {
-//     var fkUsuario = req.params.fkUsuario;
-
-//     votoUsuarioModel.deletarDadosRanking(fkUsuario)
-//         .then(
-//             function (resultado) {
-//                 res.json(resultado);
-//             }
-//         )
-//         .catch(
-//             function (erro) {
-//                 console.log(erro);
-//                 console.log("Houve um erro nos dados do ranking: ", erro.sqlMessage);
-//                 res.status(500).json(erro.sqlMessage);
-//             }
-//         );
-// }
-
-// function verificarUsuarioRanking(req, res) {
-//     var fkUsuario = req.params.fkUsuario;
-//     console.log("Valor de fkUsuario recebido: ", fkUsuario);
-
-//     votoUsuarioModel.verificarUsuarioRanking(fkUsuario)
-//         .then(
-//             function (resultado) {
-//                 res.json(resultado);
-//             }
-//         )
-//         .catch(
-//             function (erro) {
-//                 console.log(erro);
-//                 console.log("Houve um erro nos dados do ranking: ", erro.sqlMessage);
-//                 res.status(500).json(erro.sqlMessage);
-//             }
-//         );
-// }
 
 function albumPorGenero(req, res) {
     votoUsuarioModel.albumPorGenero()
@@ -151,8 +114,6 @@ module.exports = {
     listar,
     testar,
     exibirQtdUserRanking,
-    // deletarDadosRanking,
-    // verificarUsuarioRanking,
     albumPorGenero,
     top10Albuns
 }
