@@ -54,9 +54,8 @@ h1, p{
     display: flex;
     width: 90%;
     height: 82%;
-    border: 3px solid white;
-    border-radius: 15px;
-    box-shadow: -8px 8px 4px red;
+    border: 1px solid white;
+    border-radius: 5px;
 }
 
 span{
